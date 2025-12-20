@@ -15,11 +15,11 @@
 
         <div class="bg-slate-800/50 p-8 rounded-2xl border-l-4 border-cyan-500 backdrop-blur-sm">
             <p class="text-slate-300 text-lg leading-relaxed text-justify">
-                Développeur Full-Stack expérimenté avec une passion pour l'innovation technologique. Spécialisé en <strong class="text-white">Flutter</strong> pour les applications mobile, le développement web avec <strong class="text-white">HTML, CSS, JavaScript et Node.js</strong>, ainsi que les frameworks comme <strong class="text-white">Ruby on Rails et Django</strong> pour des solutions backend robustes.
+                <strong class="text-white">Développeur Full-Stack</strong> avec une expertise avérée dans la conception et le déploiement d'applications web et mobiles performantes. Ma maîtrise de <strong class="text-white">Flutter</strong> me permet de développer des applications cross-plateforme fluides, tandis que mon expertise en développement web frontend (<strong class="text-white">HTML5, CSS3, JavaScript/TypeScript</strong>) et backend (<strong class="text-white">Node.js, Ruby on Rails, Django</strong>) assure des solutions complètes et évolutives.
                 <br><br>
-                J'explore également l'intelligence artificielle, l'automatisation, la <strong class="text-white">blockchain</strong> (smart contracts et intégrations), et les bases de données telles que Supabase, PostgreSQL et MySQL.
+                J'ai approfondi mes compétences dans des domaines stratégiques comme l'<strong class="text-white">intelligence artificielle</strong>, l'automatisation des processus, et la <strong class="text-white">blockchain</strong> (développement de smart contracts et intégration de solutions décentralisées). Mon expérience avec les bases de données relationnelles (<strong class="text-white">PostgreSQL, MySQL</strong>) et les solutions cloud comme <strong class="text-white">Supabase</strong> me permet de concevoir des architectures robustes et sécurisées.
                 <br><br>
-                Motivé par la curiosité, je suis constamment en apprentissage pour créer des applications performantes et impactantes, en mettant l'accent sur l'expérience utilisateur et la scalabilité. Prêt à relever de nouveaux défis et à collaborer sur de nouveaux projets excitants !
+                Guidé par une curiosité intellectuelle constante, je m'engage dans un processus d'apprentissage continu pour maîtriser les dernières avancées technologiques. Mon approche centrée sur l'utilisateur et mon souci du détail technique font de moi un partenaire idéal pour transformer des idées innovantes en solutions logicielles performantes et évolutives.
             </p>
         </div>
 

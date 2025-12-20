@@ -4,6 +4,16 @@
     </h2>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Project: Coopérative Agricole -->
+        <x-project-card 
+            title="SCOOPS FAB" 
+            tech="HTML / CSS / JavaScript" 
+            color="emerald"
+            desc="Site vitrine d'une coopérative agricole burkinabée promouvant l'agriculture locale, l'autonomisation des femmes et les activités agricoles durables."
+            link="https://scoopsfab.com/"
+            noGithub="true"
+        />
+
         <!-- Project: Application de Gestion d'Événements (Java) -->
         <x-project-card 
             title="App Gestion Événements" 

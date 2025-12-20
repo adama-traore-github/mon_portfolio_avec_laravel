@@ -11,7 +11,11 @@ return Application::configure(basePath: dirname(__DIR__))
         health: '/up',
     )
     ->withMiddleware(function (Middleware $middleware): void {
-        //
+        /**
+         * Rigueur technique : Render utilise un proxy (Load Balancer).
+         * Cette ligne permet à Laravel de reconnaître les en-têtes HTTPS envoyés par Render.
+         */
+        $middleware->trustProxies(at: '*');
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

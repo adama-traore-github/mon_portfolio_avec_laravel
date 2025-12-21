@@ -216,6 +216,12 @@
                     </span>
                     <span>Trello</span>
                 </li>
+                <li class="flex items-center group">
+                    <span class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-lg mr-3 group-hover:border-blue-400 transition-colors">
+                        <i class="fab fa-docker text-blue-400"></i>
+                    </span>
+                    <span>Docker</span>
+                </li>
             </ul>
         </div>
 

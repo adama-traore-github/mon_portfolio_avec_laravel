@@ -31,7 +31,7 @@
 
     <!-- Mobile Menu Panel -->
     <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-white/10">
-        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+        <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
             <x-mobile-nav-link href="#home" label="Accueil" />
             <x-mobile-nav-link href="#projects" label="Projets" />
             <x-mobile-nav-link href="#skills" label="Compétences" />

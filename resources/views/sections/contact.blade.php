@@ -7,37 +7,135 @@
     </div>
 
     <div class="bg-slate-800/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-slate-700 shadow-xl">
-        <form class="space-y-6">
+        <div id="form-message" class="mt-4 text-center text-green-500 font-medium hidden">Message envoyé !</div>
+
+        <form id="contact-form" class="space-y-6" onsubmit="return submitForm(event)">
+            <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_next" value="{{ url('/#contact') }}" id="form-submit-success">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_autoresponse" value="Merci pour votre message. Je vous répondrai dès que possible !">
+            
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label class="block text-slate-300 mb-2 font-medium">Nom complet</label>
-                    <input type="text" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors" placeholder="John Doe">
+                    <label for="name" class="block text-slate-300 mb-2 font-medium">Nom complet</label>
+                    <input type="text" id="name" name="name" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors" placeholder="John Doe">
                 </div>
                 <div>
-                    <label class="block text-slate-300 mb-2 font-medium">Email</label>
-                    <input type="email" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors" placeholder="john@example.com">
+                    <label for="email" class="block text-slate-300 mb-2 font-medium">Email</label>
+                    <input type="email" id="email" name="email" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors" placeholder="john@example.com">
                 </div>
             </div>
 
             <div>
-                 <label class="block text-slate-300 mb-2 font-medium">Sujet</label>
-                 <select class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
-                    <option>Proposition de projet</option>
-                    <option>Opportunité d'emploi</option>
-                    <option>Partenariat</option>
-                    <option>Autre</option>
+                 <label for="subject" class="block text-slate-300 mb-2 font-medium">Sujet</label>
+                 <select id="subject" name="subject" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
+                    <option value="Proposition de projet">Proposition de projet</option>
+                    <option value="Opportunité d'emploi">Opportunité d'emploi</option>
+                    <option value="Partenariat">Partenariat</option>
+                    <option value="Autre">Autre</option>
                  </select>
             </div>
 
             <div>
-                <label class="block text-slate-300 mb-2 font-medium">Message</label>
-                <textarea rows="5" class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors" placeholder="Décrivez votre besoin..."></textarea>
+                <label for="message" class="block text-slate-300 mb-2 font-medium">Message</label>
+                <textarea id="message" name="message" rows="5" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors" placeholder="Décrivez votre besoin..."></textarea>
             </div>
 
             <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold py-4 rounded-lg hover:shadow-lg hover:shadow-cyan-500/30 transform hover:-translate-y-1 transition-all duration-300">
                 Envoyer le message
             </button>
         </form>
+        
+        <script>
+            function submitForm(event) {
+                event.preventDefault();
+                const form = event.target;
+                const submitButton = form.querySelector('button[type="submit"]');
+                const originalButtonText = submitButton.innerHTML;
+                
+                // Afficher l'état de chargement
+                submitButton.disabled = true;
+                submitButton.innerHTML = 'Envoi en cours...';
+                
+                // Récupérer l'email depuis la configuration Laravel
+                const formSubmitEmail = '{{ config('services.formsubmit.email') }}';
+                const formAction = `https://formsubmit.co/ajax/${formSubmitEmail}`;
+                const formData = new FormData(form);
+                
+                // Envoyer le formulaire avec fetch
+                fetch(formAction, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    },
+                    mode: 'no-cors' // Désactive CORS pour cette requête
+                })
+                .then(() => {
+                    // Mise à jour du bouton en cas de succès
+                    submitButton.textContent = 'Message envoyé avec succès !';
+                    submitButton.classList.remove('from-blue-600', 'to-cyan-600', 'hover:shadow-cyan-500/30');
+                    submitButton.classList.add('from-green-500', 'to-emerald-500', 'cursor-not-allowed');
+                    
+                    // Réinitialiser le formulaire
+                    form.reset();
+                    
+                   
+                })
+                .catch(error => {
+                    console.error('Erreur:', error);
+                    // Afficher une alerte d'erreur
+                    alert('Une erreur est survenue. Veuillez me contacter directement à traoreadama.dev@gmail.com');
+                    
+                    // Réactiver le bouton en cas d'erreur
+                    submitButton.disabled = false;
+                    submitButton.innerHTML = originalButtonText;
+                });
+                
+                return false;
+            }
+        </script>
+
+        <script>
+            // Gestion de la navigation active
+            document.addEventListener('DOMContentLoaded', function() {
+                const sections = document.querySelectorAll('section[id]');
+                const navLinks = document.querySelectorAll('nav a[href^="#"]');
+                
+                const observerOptions = {
+                    root: null,
+                    rootMargin: '0px',
+                    threshold: 0.5
+                };
+                
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const id = entry.target.getAttribute('id');
+                            navLinks.forEach(link => {
+                                link.classList.remove('text-blue-400');
+                                if (link.getAttribute('href') === `#${id}`) {
+                                    link.classList.add('text-blue-400');
+                                }
+                            });
+                        }
+                    });
+                }, observerOptions);
+                
+                sections.forEach(section => {
+                    observer.observe(section);
+                });
+                
+                // Gestion du clic sur les liens de navigation
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        navLinks.forEach(l => l.classList.remove('text-blue-400'));
+                        this.classList.add('text-blue-400');
+                    });
+                });
+            });
+        </script>
 
         <div class="mt-12 w-full flex justify-center space-x-6">
             <a href="https://github.com/adama-traore-github" target="_blank" class="text-slate-400 hover:text-white transition-colors transform hover:scale-110">

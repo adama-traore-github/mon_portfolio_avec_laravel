@@ -45,6 +45,7 @@ RUN npm run build
 # 9. Attribution des permissions aux dossiers de cache et de stockage
 RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
+
 # 10. Exposition du port 80
 EXPOSE 80
 

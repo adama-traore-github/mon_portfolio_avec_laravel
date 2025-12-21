@@ -1,0 +1,18 @@
+services:
+  app:
+    build: .
+    container_name: portfolio_container
+    ports:
+      - "8080:80"
+    volumes:
+      - .:/var/www/html
+    command: >
+      bash -c "chown -R www-data:www-data storage bootstrap/cache && apache2-foreground"
+    environment:
+      APP_KEY: "base64:S1pZa1s7KqEhqIMYwMjuK4JZ/uCC1O23Xa5gtwzs2T8="
+      APP_ENV: local
+      APP_DEBUG: "true"
+      SESSION_DRIVER: file
+      DB_CONNECTION: sqlite
+      DB_DATABASE: ":memory:"
+      LOG_CHANNEL: stderr

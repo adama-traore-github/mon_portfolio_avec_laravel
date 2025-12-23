@@ -14,10 +14,10 @@
     $theme = $colors[$color] ?? $colors['blue'];
 @endphp
 
-<div class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/20 flex flex-col">
-    <div class="h-40 bg-slate-700 w-full overflow-hidden flex items-center justify-center relative">
-        <div class="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 opacity-50"></div>
-        <div class="z-10 text-4xl font-bold text-slate-600 group-hover:text-cyan-500/50 transition-colors uppercase tracking-widest">
+<div class="group relative bg-slate-800 rounded-2xl overflow-hidden border border-slate-700 hover:border-cyan-500 transition-all duration-300 hover:shadow-2xl hover:shadow-cyan-500/30 flex flex-col transform hover:-translate-y-3 hover:scale-[1.08] z-10">
+    <div class="h-40 bg-slate-700 w-full overflow-hidden flex items-center justify-center relative group-hover:bg-cyan-900/30 transition-all duration-300">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-800 to-slate-900 opacity-50 group-hover:opacity-60 transition-opacity duration-300"></div>
+        <div class="z-10 text-4xl font-bold text-slate-600 group-hover:text-cyan-500/50 transition-all duration-300 transform group-hover:scale-150 uppercase tracking-widest">
             {{ substr($title, 0, 2) }}
         </div>
     </div>

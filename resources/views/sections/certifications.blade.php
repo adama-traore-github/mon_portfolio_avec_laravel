@@ -4,7 +4,7 @@
         
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
             <!-- Cloud & Infrastructure -->
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Cloud Computing Basics</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Coursera • 2023</p>
@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Terraform Basics</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Coursera • 2023</p>
@@ -38,7 +38,7 @@
                 </div>
             </div>
 
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Premiers pas avec Azure</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Coursera • 2023</p>
@@ -56,7 +56,7 @@
             </div>
 
             <!-- DevOps & Automatisation -->
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Jenkins: Automating Your Delivery Pipeline</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Coursera • 2023</p>
@@ -74,7 +74,7 @@
             </div>
 
             <!-- Développement -->
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Ruby Scripting for DevOps</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">Coursera • 2023</p>
@@ -91,7 +91,7 @@
                 </div>
             </div>
 
-            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+            <div class="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden transition-all duration-300 transform hover:-translate-y-2 hover:scale-105 hover:shadow-2xl">
                 <div class="p-6">
                     <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-2">Développeur Full Stack Web</h3>
                     <p class="text-gray-600 dark:text-gray-300 text-sm mb-3">LinkedIn Learning • 2023</p>

@@ -10,8 +10,8 @@
             tech="HTML / CSS / JavaScript" 
             color="emerald"
             desc="Site vitrine d'une coopérative agricole burkinabée promouvant l'agriculture locale, l'autonomisation des femmes et les activités agricoles durables."
-            link="https://scoopsfab.com/"
-            noGithub="true"
+            link="#"
+            deploy="https://scoopsfab.com/"
         />
 
         <!-- Project: Application de Gestion d'Événements (Java) -->

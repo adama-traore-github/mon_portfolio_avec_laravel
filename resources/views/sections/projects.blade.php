@@ -39,6 +39,7 @@
             color="yellow"
             desc="Plateforme web pour la gestion de tokens blockchain, offrant une interface pour créer et gérer des actifs numériques."
             link="https://github.com/adama-traore-github/Token_Manager_online"
+            deploy="https://web-part-of-the-token-project.vercel.app/"
         />
 
         <!-- Project: Gestion de Tâches (Frontend) -->

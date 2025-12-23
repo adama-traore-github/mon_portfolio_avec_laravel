@@ -12,6 +12,7 @@
             desc="Site vitrine d'une coopérative agricole burkinabée promouvant l'agriculture locale, l'autonomisation des femmes et les activités agricoles durables."
             link="#"
             deploy="https://scoopsfab.com/"
+            :showGithub="false"
         />
 
         <!-- Project: Application de Gestion d'Événements (Java) -->

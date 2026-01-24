@@ -1,13 +1,13 @@
 <section id="contact" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-screen flex flex-col justify-center scroll-mt-20">
     <div class="text-center mb-16">
         <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
-            Parlons de <span class="bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">Votre Projet</span>
+            {!! __('Lets Talk') !!}
         </h2>
         <p class="text-slate-400 text-lg">Une idée ? Une question ? N'hésitez pas à m'écrire.</p>
     </div>
 
     <div class="bg-slate-800/50 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-slate-700 shadow-xl">
-        <div id="form-message" class="mt-4 text-center text-green-500 font-medium hidden">Message envoyé !</div>
+        <div id="form-message" class="mt-4 text-center text-green-500 font-medium hidden">{{ __('Message sent!') }}</div>
 
         <form id="contact-form" class="space-y-6" onsubmit="return submitForm(event)">
             <input type="hidden" name="_subject" value="Nouveau message depuis votre portfolio">
@@ -18,32 +18,32 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                    <label for="name" class="block text-slate-300 mb-2 font-medium">Nom complet</label>
+                    <label for="name" class="block text-slate-300 mb-2 font-medium">{{ __('Name') }}</label>
                     <input type="text" id="name" name="name" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors" placeholder="John Doe">
                 </div>
                 <div>
-                    <label for="email" class="block text-slate-300 mb-2 font-medium">Email</label>
+                    <label for="email" class="block text-slate-300 mb-2 font-medium">{{ __('Email') }}</label>
                     <input type="email" id="email" name="email" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors" placeholder="john@example.com">
                 </div>
             </div>
 
             <div>
-                 <label for="subject" class="block text-slate-300 mb-2 font-medium">Sujet</label>
+                 <label for="subject" class="block text-slate-300 mb-2 font-medium">{{ __('Subject') }}</label>
                  <select id="subject" name="subject" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors">
-                    <option value="Proposition de projet">Proposition de projet</option>
-                    <option value="Opportunité d'emploi">Opportunité d'emploi</option>
-                    <option value="Partenariat">Partenariat</option>
-                    <option value="Autre">Autre</option>
+                    <option value="Proposition de projet">{{ __('Project Proposal') }}</option>
+                    <option value="Opportunité d'emploi">{{ __('Job Opportunity') }}</option>
+                    <option value="Partenariat">{{ __('Partnership') }}</option>
+                    <option value="Autre">{{ __('Other') }}</option>
                  </select>
             </div>
 
             <div>
-                <label for="message" class="block text-slate-300 mb-2 font-medium">Message</label>
+                <label for="message" class="block text-slate-300 mb-2 font-medium">{{ __('Message') }}</label>
                 <textarea id="message" name="message" rows="5" required class="w-full bg-slate-900/50 border border-slate-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors" placeholder="Décrivez votre besoin..."></textarea>
             </div>
 
             <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-cyan-600 text-white font-bold py-4 rounded-lg hover:shadow-lg hover:shadow-cyan-500/30 transform hover:-translate-y-1 transition-all duration-300">
-                Envoyer le message
+                {{ __('Send Message') }}
             </button>
         </form>
         
@@ -56,7 +56,7 @@
                 
                 // Afficher l'état de chargement
                 submitButton.disabled = true;
-                submitButton.innerHTML = 'Envoi en cours...';
+                submitButton.innerHTML = '{{ __('Sending...') }}';
                 
                 // Récupérer l'email depuis la configuration Laravel
                 const formSubmitEmail = '{{ config('services.formsubmit.email') }}';
@@ -74,7 +74,7 @@
                 })
                 .then(() => {
                     // Mise à jour du bouton en cas de succès
-                    submitButton.textContent = 'Message envoyé avec succès !';
+                    submitButton.textContent = '{{ __('Message sent!') }}';
                     submitButton.classList.remove('from-blue-600', 'to-cyan-600', 'hover:shadow-cyan-500/30');
                     submitButton.classList.add('from-green-500', 'to-emerald-500', 'cursor-not-allowed');
                     
@@ -86,7 +86,7 @@
                 .catch(error => {
                     console.error('Erreur:', error);
                     // Afficher une alerte d'erreur
-                    alert('Une erreur est survenue. Veuillez me contacter directement à traoreadama.dev@gmail.com');
+                    alert('{{ __('Error occurred') }}');
                     
                     // Réactiver le bouton en cas d'erreur
                     submitButton.disabled = false;

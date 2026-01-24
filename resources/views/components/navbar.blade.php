@@ -10,12 +10,24 @@
 
             <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-8">
-                <x-nav-link href="#home" label="Accueil" />
-                <x-nav-link href="#projects" label="Projets" />
-                <x-nav-link href="#skills" label="Compétences" />
-                <x-nav-link href="#experience" label="Expérience" />
-                <x-nav-link href="#about" label="À propos" />
-                <x-nav-link href="#contact" label="Contact" />
+                <x-nav-link href="#home" label="{{ __('Home') }}" />
+                <x-nav-link href="#projects" label="{{ __('Projects') }}" />
+                <x-nav-link href="#skills" label="{{ __('Skills') }}" />
+                <x-nav-link href="#experience" label="{{ __('Experience') }}" />
+                <x-nav-link href="#about" label="{{ __('About') }}" />
+                <x-nav-link href="#contact" label="{{ __('Contact') }}" />
+                
+                <!-- Desktop Theme Toggle -->
+                <button id="desktop-theme-btn" onclick="toggleTheme()" class="text-gray-300 hover:text-white focus:outline-none transition-colors" title="Changer le thème">
+                    <i class="fas fa-sun text-xl"></i>
+                </button>
+                
+                <!-- Language Switcher -->
+                <div class="flex items-center space-x-2 text-sm font-medium">
+                    <a href="{{ route('lang.switch', 'fr') }}" class="{{ app()->getLocale() == 'fr' ? 'text-cyan-400 font-bold' : 'text-gray-400 hover:text-white' }} transition-colors">FR</a>
+                    <span class="text-gray-600">|</span>
+                    <a href="{{ route('lang.switch', 'en') }}" class="{{ app()->getLocale() == 'en' ? 'text-cyan-400 font-bold' : 'text-gray-400 hover:text-white' }} transition-colors">EN</a>
+                </div>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -32,12 +44,64 @@
     <!-- Mobile Menu Panel -->
     <div id="mobile-menu" class="hidden md:hidden bg-slate-900 border-b border-white/10">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 flex flex-col items-center">
-            <x-mobile-nav-link href="#home" label="Accueil" />
-            <x-mobile-nav-link href="#projects" label="Projets" />
-            <x-mobile-nav-link href="#skills" label="Compétences" />
-            <x-mobile-nav-link href="#experience" label="Expérience" />
-            <x-mobile-nav-link href="#about" label="À propos" />
-            <x-mobile-nav-link href="#contact" label="Contact" />
+            <x-mobile-nav-link href="#home" label="{{ __('Home') }}" />
+            <x-mobile-nav-link href="#projects" label="{{ __('Projects') }}" />
+            <x-mobile-nav-link href="#skills" label="{{ __('Skills') }}" />
+            <x-mobile-nav-link href="#experience" label="{{ __('Experience') }}" />
+            <x-mobile-nav-link href="#about" label="{{ __('About') }}" />
+            <x-mobile-nav-link href="#contact" label="{{ __('Contact') }}" />
+            
+            <!-- Mobile Theme Toggle -->
+            <button onclick="toggleTheme()" class="mt-4 px-4 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors flex items-center gap-2">
+                <i id="mobile-theme-icon" class="fas fa-sun"></i>
+                <span id="mobile-theme-text">{{ __('Light Mode') }}</span>
+            </button>
+            
+            <!-- Mobile Language Switcher -->
+            <div class="mt-4 flex items-center space-x-4 text-lg font-medium">
+                <a href="{{ route('lang.switch', 'fr') }}" class="{{ app()->getLocale() == 'fr' ? 'text-cyan-400 font-bold' : 'text-gray-400' }}">Français</a>
+                <span class="text-gray-600">|</span>
+                <a href="{{ route('lang.switch', 'en') }}" class="{{ app()->getLocale() == 'en' ? 'text-cyan-400 font-bold' : 'text-gray-400' }}">English</a>
+            </div>
         </div>
     </div>
+
+    <script>
+        function toggleTheme() {
+            const html = document.documentElement;
+            html.classList.toggle('theme-light');
+            
+            const isLight = html.classList.contains('theme-light');
+            
+            if (isLight) {
+                localStorage.setItem('theme', 'light');
+            } else {
+                localStorage.removeItem('theme');
+            }
+            
+            updateThemeIcons(isLight);
+        }
+        
+        function updateThemeIcons(isLight) {
+            const desktopIcon = document.querySelector('#desktop-theme-btn i');
+            const mobileIcon = document.querySelector('#mobile-theme-icon');
+            const mobileText = document.querySelector('#mobile-theme-text');
+            
+            if (isLight) {
+                desktopIcon?.classList.replace('fa-sun', 'fa-moon');
+                mobileIcon?.classList.replace('fa-sun', 'fa-moon');
+                if (mobileText) mobileText.textContent = "{{ __('Dark Mode') }}";
+            } else {
+                desktopIcon?.classList.replace('fa-moon', 'fa-sun');
+                mobileIcon?.classList.replace('fa-moon', 'fa-sun');
+                if (mobileText) mobileText.textContent = "{{ __('Light Mode') }}";
+            }
+        }
+        
+        // Initialize icons on load
+        document.addEventListener('DOMContentLoaded', () => {
+             const isLight = document.documentElement.classList.contains('theme-light');
+             updateThemeIcons(isLight);
+        });
+    </script>
 </nav>

@@ -16,6 +16,11 @@ return Application::configure(basePath: dirname(__DIR__))
          * Cette ligne permet à Laravel de reconnaître les en-têtes HTTPS envoyés par Render.
          */
         $middleware->trustProxies(at: '*');
+        
+        // Localization Middleware
+        $middleware->web(append: [
+            \App\Http\Middleware\SetLocale::class,
+        ]);
     })
     ->withExceptions(function (Exceptions $exceptions): void {
         //

@@ -12,24 +12,23 @@
             <!-- Left Column: Typography -->
             <div class="w-full lg:w-1/2 text-center lg:text-left">
                 <h1 class="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-                    Développeur <br/>
-                    Full-Stack <br/>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500">Passionné</span>
+                    {{ __('Full-Stack Developer') }} <br/>
+                    {!! __('Passionate') !!}
                 </h1>
 
                 <p class="text-lg text-slate-300 mb-8 max-w-lg mx-auto lg:mx-0">
-                    Je transforme vos idées en solutions web performantes et élégantes, en alliant expertise technique et créativité pour des résultats qui dépassent vos attentes.
+                    {{ __('Hero Description') }}
                 </p>
 
                 <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
                     <!-- Modern Blue Button -->
                     <a href="#projets" class="px-7 py-3.5 bg-[#0ea5e9] hover:bg-[#0284c7] text-white rounded-full font-bold transition-all shadow-[0_4px_14px_0_rgba(14,165,233,0.39)] hover:shadow-[0_6px_20px_rgba(14,165,233,0.23)] hover:-translate-y-0.5 w-full sm:w-auto">
-                        Voir mes travaux
+                        {{ __('View my work') }}
                     </a>
                     
                     <!-- Outline Button -->
                     <a href="#contact" class="px-7 py-3.5 rounded-full text-slate-300 border border-slate-700 hover:border-cyan-500 hover:text-white transition-all font-medium w-full sm:w-auto">
-                        Me contacter
+                        {{ __('Contact me') }}
                     </a>
                 </div>
             </div>

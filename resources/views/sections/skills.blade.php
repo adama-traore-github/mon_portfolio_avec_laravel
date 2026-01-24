@@ -2,9 +2,9 @@
     
     <!-- Section Technique -->
     <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
-        Arsenal <span class="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">Technique</span>
+        {!! __('Technical Arsenal') !!}
     </h2>
-    <p class="text-slate-400 text-center mb-16 max-w-2xl mx-auto">Les outils et technologies que j'utilise au quotidien pour bâtir des solutions robustes.</p>
+    <p class="text-slate-400 text-center mb-16 max-w-2xl mx-auto">{{ __('The tools and technologies I use daily to build robust solutions.') }}</p>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
         <!-- Langages -->
@@ -13,7 +13,7 @@
                 <svg class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                 </svg>
-                Langages
+                {{ __('Languages') }}
             </h3>
             <ul class="space-y-3 text-slate-300">
                 <li class="flex items-center group">
@@ -131,19 +131,19 @@
                     <span class="w-8 h-8 flex items-center justify-center bg-yellow-500/10 rounded-lg mr-3 group-hover:bg-yellow-500/20 transition-colors">
                         <i class="fas fa-file-contract text-yellow-500"></i>
                     </span>
-                    <span>Smart Contracts</span>
+                    <span>{{ __('Smart Contracts') }}</span>
                 </li>
                 <li class="flex items-center group">
                     <span class="w-8 h-8 flex items-center justify-center bg-blue-500/10 rounded-lg mr-3 group-hover:bg-blue-500/20 transition-colors">
                         <i class="fas fa-cube text-blue-500"></i>
                     </span>
-                    <span>Intégration Web3</span>
+                    <span>{{ __('Web3 Integration') }}</span>
                 </li>
                 <li class="flex items-center group">
                     <span class="w-8 h-8 flex items-center justify-center bg-green-500/10 rounded-lg mr-3 group-hover:bg-green-500/20 transition-colors">
                         <i class="fas fa-coins text-green-500"></i>
                     </span>
-                    <span>Token Management</span>
+                    <span>{{ __('Token Management') }}</span>
                 </li>
             </ul>
         </div>
@@ -238,45 +238,45 @@
                     <span class="w-8 h-8 flex items-center justify-center bg-purple-600/10 rounded-lg mr-3 group-hover:bg-purple-600/20 transition-colors">
                         <i class="fas fa-sync-alt text-purple-600"></i>
                     </span>
-                    <span>Méthodologie Agile</span>
+                    <span>{{ __('Agile Methodology') }}</span>
                 </li>
                 <li class="flex items-center group">
                     <span class="w-8 h-8 flex items-center justify-center bg-blue-500/10 rounded-lg mr-3 group-hover:bg-blue-500/20 transition-colors">
                         <i class="fas fa-project-diagram text-blue-500"></i>
                     </span>
-                    <span>Gestion de projet</span>
+                    <span>{{ __('Project Management') }}</span>
                 </li>
                 <li class="flex items-center group">
                     <span class="w-8 h-8 flex items-center justify-center bg-green-500/10 rounded-lg mr-3 group-hover:bg-green-500/20 transition-colors">
                         <i class="fas fa-code-branch text-green-500"></i>
                     </span>
-                    <span>Revues de code</span>
+                    <span>{{ __('Code Reviews') }}</span>
                 </li>
                 <li class="flex items-center group">
                     <span class="w-8 h-8 flex items-center justify-center bg-yellow-500/10 rounded-lg mr-3 group-hover:bg-yellow-500/20 transition-colors">
                         <i class="fas fa-comments text-yellow-500"></i>
                     </span>
-                    <span>Rétrospectives</span>
+                    <span>{{ __('Retrospectives') }}</span>
                 </li>
             </ul>
         </div>
     </div>
 
     <!-- Section Savoir-faire -->
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">Ce que je sais <span class="text-cyan-400">faire</span></h2>
+    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">{!! __('What I know') !!}</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         @php
             $knowhows = [
-                ['title' => 'Solutions Complètes', 'desc' => 'Concevoir et implémenter des applications web et mobile complètes, du concept à la production.'],
-                ['title' => 'Méthodologie Agile', 'desc' => 'Gérer les projets avec sprints, stand-ups et adaptations itératives pour une livraison rapide.'],
-                ['title' => 'Intégration Blockchain', 'desc' => 'Développer des smart contracts et intégrer des solutions Web3 sécurisées.'],
-                ['title' => 'Maîtrise des Bases de Données', 'desc' => 'Conception et optimisation de schémas complexes (SQL/NoSQL) avec Supabase, PG, MySQL.'],
-                ['title' => 'DevOps & CI/CD', 'desc' => 'Automatisation des tests et déploiements via GitHub Actions pour un code toujours propre.'],
-                ['title' => 'Logique Backend', 'desc' => 'APIs RESTful robustes et performantes avec Node, PHP & Laravel.'],
-                ['title' => 'UX Frontend', 'desc' => 'Interfaces modernes, réactives et accessibles (Web & Mobile).'],
-                ['title' => 'Architecture du Code', 'desc' => 'Clean Code et patrons de conception pour une maintenabilité maximale.'],
-                ['title' => 'Boost IA', 'desc' => 'Exploitation de l\'IA pour optimiser les workflows et résoudre des problèmes complexes.'],
+                ['title' => __('Solutions Complètes'), 'desc' => __('desc_Solutions Complètes')],
+                ['title' => __('Agile Methodology'), 'desc' => __('desc_Méthodologie Agile')],
+                ['title' => __('Intégration Blockchain'), 'desc' => __('desc_Intégration Blockchain')],
+                ['title' => __('Maîtrise des Bases de Données'), 'desc' => __('desc_Maîtrise des Bases de Données')],
+                ['title' => __('DevOps & CI/CD'), 'desc' => __('desc_DevOps & CI/CD')],
+                ['title' => __('Logique Backend'), 'desc' => __('desc_Logique Backend')],
+                ['title' => __('UX Frontend'), 'desc' => __('desc_UX Frontend')],
+                ['title' => __('Architecture du Code'), 'desc' => __('desc_Architecture du Code')],
+                ['title' => __('Boost IA'), 'desc' => __('desc_Boost IA')],
             ];
         @endphp
 

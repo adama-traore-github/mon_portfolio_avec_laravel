@@ -12,6 +12,14 @@
             desc="{{ __('desc_portfolio') }}"
             link="https://github.com/adama-traore-github/mon_portfolio_avec_laravel"
         />
+        <!-- Project: ShopEasy -->
+        <x-project-card 
+            title="{{ __('ShopEasy') }}" 
+            tech="Flutter / Dart" 
+            color="indigo"
+            desc="{{ __('desc_shopeasy') }}"
+            link="https://github.com/adama-traore-github/shopeasy"
+        />
         <!-- Project: Coopérative Agricole -->
         <x-project-card 
             title="{{ __('SCOOPS FAB') }}" 

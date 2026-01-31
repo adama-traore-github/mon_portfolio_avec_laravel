@@ -200,11 +200,13 @@ html.theme-light #mobile-menu {
 }
 
 /* Links and interactions */
-html.theme-light a.text-gray-300:hover {
+html.theme-light a.text-gray-300:hover,
+html.theme-light button.text-gray-300:hover {
     color: #000000;
 }
 
-html.theme-light a.text-gray-300 {
+html.theme-light a.text-gray-300,
+html.theme-light button.text-gray-300 {
     color: #4b5563;
     /* gray-600 */
 }

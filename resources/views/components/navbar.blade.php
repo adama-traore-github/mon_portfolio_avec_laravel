@@ -23,11 +23,10 @@
                 </button>
                 
                 <!-- Language Switcher -->
-                <div class="flex items-center space-x-2 text-sm font-medium">
-                    <a href="{{ route('lang.switch', 'fr') }}" class="{{ app()->getLocale() == 'fr' ? 'text-cyan-400 font-bold' : 'text-gray-400 hover:text-white' }} transition-colors">FR</a>
-                    <span class="text-gray-600">|</span>
-                    <a href="{{ route('lang.switch', 'en') }}" class="{{ app()->getLocale() == 'en' ? 'text-cyan-400 font-bold' : 'text-gray-400 hover:text-white' }} transition-colors">EN</a>
-                </div>
+                <a href="{{ route('lang.switch', app()->getLocale() == 'fr' ? 'en' : 'fr') }}" class="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors" title="{{ app()->getLocale() == 'fr' ? 'Switch to English' : 'Passer en Français' }}">
+                    <i class="fas fa-globe text-xl"></i>
+                    <span class="text-sm font-bold">{{ strtoupper(app()->getLocale()) }}</span>
+                </a>
             </div>
 
             <!-- Mobile Menu Button -->
@@ -58,11 +57,10 @@
             </button>
             
             <!-- Mobile Language Switcher -->
-            <div class="mt-4 flex items-center space-x-4 text-lg font-medium">
-                <a href="{{ route('lang.switch', 'fr') }}" class="{{ app()->getLocale() == 'fr' ? 'text-cyan-400 font-bold' : 'text-gray-400' }}">Français</a>
-                <span class="text-gray-600">|</span>
-                <a href="{{ route('lang.switch', 'en') }}" class="{{ app()->getLocale() == 'en' ? 'text-cyan-400 font-bold' : 'text-gray-400' }}">English</a>
-            </div>
+            <a href="{{ route('lang.switch', app()->getLocale() == 'fr' ? 'en' : 'fr') }}" class="mt-4 px-4 py-2 rounded-full bg-white/10 text-white hover:bg-white/20 transition-colors flex items-center gap-2">
+                <i class="fas fa-globe"></i>
+                <span>{{ app()->getLocale() == 'fr' ? 'Français' : 'English' }}</span>
+            </a>
         </div>
     </div>
 

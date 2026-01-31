@@ -92,5 +92,7 @@
     "Task Manager Mobile": "Task Manager Mobile",
     "desc_task_mobile": "Native mobile application for task management.",
     "Portfolio Personnel": "Personal Portfolio",
-    "desc_portfolio": "This website! Built with Laravel, TailwindCSS, and Alpine.js. Bilingual support, dark/light mode, and smooth animations."
+    "desc_portfolio": "This website! Built with Laravel, TailwindCSS, and Alpine.js. Bilingual support, dark/light mode, and smooth animations.",
+    "ShopEasy": "ShopEasy",
+    "desc_shopeasy": "Complete e-commerce application with cart management, favorites, and order history."
 }

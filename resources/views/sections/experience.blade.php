@@ -12,7 +12,7 @@
             
             <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
                 <div class="md:col-span-1 md:text-right mb-2 md:mb-0">
-                    <span class="text-emerald-400 font-bold block">8 mois</span>
+                    <span class="text-emerald-400 font-bold block">1 an</span>
                     <span class="text-slate-500 text-sm">{{ __('Safrimat Burkina') }}</span>
                 </div>
                 <div class="md:col-span-4 bg-slate-800 rounded-2xl p-8 border border-slate-700 shadow-lg relative">
@@ -36,7 +36,7 @@
             
             <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
                 <div class="md:col-span-1 md:text-right mb-2 md:mb-0">
-                    <span class="text-blue-400 font-bold block">1 an</span>
+                    <span class="text-blue-400 font-bold block">2 ans</span>
                     <span class="text-slate-500 text-sm">ETP4A</span>
                 </div>
                 <div class="md:col-span-4 bg-slate-800 rounded-2xl p-8 border border-slate-700 shadow-lg relative">

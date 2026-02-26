@@ -94,5 +94,7 @@
     "Portfolio Personnel": "Personal Portfolio",
     "desc_portfolio": "This website! Built with Laravel, TailwindCSS, and Alpine.js. Bilingual support, dark/light mode, and smooth animations.",
     "ShopEasy": "ShopEasy",
-    "desc_shopeasy": "Complete e-commerce application with cart management, favorites, and order history."
+    "desc_shopeasy": "Complete e-commerce application with cart management, favorites, and order history.",
+    "ImmoGestion": "ImmoGestion",
+    "desc_immo_gestion": "Full-featured real estate management web app built with Laravel 11 & Breeze. Manage properties, tenants and leases, with role-based dashboards (manager, tenant) and secure authentication."
 }

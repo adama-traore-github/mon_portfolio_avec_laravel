@@ -123,5 +123,14 @@
             link="https://github.com/adama-traore-github/apllication_de_gestion_de-tache_avec-fluter"
         />
 
+        <!-- Project: ImmoGestion -->
+        <x-project-card 
+            title="{{ __('ImmoGestion') }}" 
+            tech="Laravel 11 / Breeze" 
+            color="purple"
+            desc="{{ __('desc_immo_gestion') }}"
+            link="https://github.com/adama-traore-github/platflorme_gestion_immobiliere"
+        />
+
     </div>
 </section>

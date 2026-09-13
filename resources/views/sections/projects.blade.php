@@ -33,8 +33,8 @@
         </button>
     </div>
 
-    <!-- Projects Grid Container -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="projects-grid">
+    <!-- Projects Grid Container (2 rows of 3 columns max per page = 6 cards) -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 min-h-[520px]" id="projects-grid">
         @foreach($projects as $project)
             <x-project-card 
                 :title="__($project['title'])" 
@@ -54,19 +54,132 @@
             />
         @endforeach
     </div>
+
+    <!-- Pagination Controls (2 Lignes = 6 Projets par Page avec Marqueurs 1, 2, 3, 4) -->
+    <div class="mt-14 flex items-center justify-center gap-2" id="projects-pagination">
+        <!-- Generé dynamiquement par JavaScript -->
+    </div>
 </section>
 
-<!-- Filter Script -->
+<!-- Filter & Client-Side Pagination Script (6 projets par page) -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const filterBtns = document.querySelectorAll('#project-filters .filter-btn');
-        const projectCards = document.querySelectorAll('#projects-grid .project-card');
+        const projectCards = Array.from(document.querySelectorAll('#projects-grid .project-card'));
+        const paginationContainer = document.getElementById('projects-pagination');
+        const projectsSection = document.getElementById('projects');
 
+        const ITEMS_PER_PAGE = 6; // 2 lignes de 3 colonnes sur PC
+        let currentFilter = 'all';
+        let currentPage = 1;
+
+        function getFilteredCards() {
+            if (currentFilter === 'all') {
+                return projectCards;
+            }
+            return projectCards.filter(card => card.getAttribute('data-category') === currentFilter);
+        }
+
+        function render() {
+            const filteredCards = getFilteredCards();
+            const totalPages = Math.ceil(filteredCards.length / ITEMS_PER_PAGE) || 1;
+
+            if (currentPage > totalPages) {
+                currentPage = 1;
+            }
+
+            const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+            const endIndex = startIndex + ITEMS_PER_PAGE;
+
+            // Masquer ou afficher chaque carte selon le filtre et la page active
+            projectCards.forEach(card => {
+                card.style.display = 'none';
+            });
+
+            filteredCards.forEach((card, index) => {
+                if (index >= startIndex && index < endIndex) {
+                    card.style.display = 'flex';
+                }
+            });
+
+            // Générer la pagination
+            renderPagination(totalPages);
+        }
+
+        function renderPagination(totalPages) {
+            paginationContainer.innerHTML = '';
+
+            if (totalPages <= 1) {
+                return; // Cacher la pagination s'il n'y a qu'une seule page
+            }
+
+            // Bouton Précédent
+            const prevBtn = document.createElement('button');
+            prevBtn.className = `w-10 h-10 rounded-xl font-bold flex items-center justify-center transition-all border ${
+                currentPage === 1 
+                ? 'bg-slate-900/50 border-slate-800 text-slate-600 cursor-not-allowed' 
+                : 'bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border-slate-700'
+            }`;
+            prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left text-xs"></i>';
+            prevBtn.disabled = currentPage === 1;
+            prevBtn.addEventListener('click', () => {
+                if (currentPage > 1) {
+                    currentPage--;
+                    render();
+                    scrollToSection();
+                }
+            });
+            paginationContainer.appendChild(prevBtn);
+
+            // Boutons de numéros de page (1, 2, 3, 4...)
+            for (let i = 1; i <= totalPages; i++) {
+                const pageBtn = document.createElement('button');
+                const isActive = i === currentPage;
+
+                pageBtn.className = `w-10 h-10 rounded-xl font-bold text-sm transition-all border ${
+                    isActive 
+                    ? 'bg-cyan-500 text-slate-950 border-cyan-500 shadow-md shadow-cyan-500/20' 
+                    : 'bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border-slate-700'
+                }`;
+                pageBtn.textContent = i;
+                pageBtn.addEventListener('click', () => {
+                    currentPage = i;
+                    render();
+                    scrollToSection();
+                });
+                paginationContainer.appendChild(pageBtn);
+            }
+
+            // Bouton Suivant
+            const nextBtn = document.createElement('button');
+            nextBtn.className = `w-10 h-10 rounded-xl font-bold flex items-center justify-center transition-all border ${
+                currentPage === totalPages 
+                ? 'bg-slate-900/50 border-slate-800 text-slate-600 cursor-not-allowed' 
+                : 'bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border-slate-700'
+            }`;
+            nextBtn.innerHTML = '<i class="fa-solid fa-chevron-right text-xs"></i>';
+            nextBtn.disabled = currentPage === totalPages;
+            nextBtn.addEventListener('click', () => {
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    render();
+                    scrollToSection();
+                }
+            });
+            paginationContainer.appendChild(nextBtn);
+        }
+
+        function scrollToSection() {
+            projectsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // Événements sur les onglets de filtre
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
-                const filter = btn.getAttribute('data-filter');
+                currentFilter = btn.getAttribute('data-filter');
+                currentPage = 1; // Réinitialiser à la page 1
 
-                // Update active state
+                // Mettre à jour les styles des onglets
                 filterBtns.forEach(b => {
                     b.classList.remove('active', 'bg-cyan-500', 'text-slate-950', 'shadow-cyan-500/20');
                     b.classList.add('bg-slate-800', 'text-slate-300', 'hover:bg-slate-700', 'border', 'border-slate-700');
@@ -75,17 +188,11 @@
                 btn.classList.add('active', 'bg-cyan-500', 'text-slate-950', 'shadow-cyan-500/20');
                 btn.classList.remove('bg-slate-800', 'text-slate-300', 'hover:bg-slate-700', 'border', 'border-slate-700');
 
-                // Filter cards
-                projectCards.forEach(card => {
-                    const cardCat = card.getAttribute('data-category');
-                    if (filter === 'all' || cardCat === filter) {
-                        card.style.display = 'flex';
-                        card.classList.add('animate-fadeIn');
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+                render();
             });
         });
+
+        // Premier rendu au chargement
+        render();
     });
 </script>

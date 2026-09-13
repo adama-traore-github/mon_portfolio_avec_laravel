@@ -44,42 +44,68 @@ html.theme-light nav.bg-slate-900\/80 {
     border-bottom-color: rgba(0, 0, 0, 0.1);
 }
 
-/* Cards and panels override */
-/* Cards and panels override */
+/* Cards and containers in Light Theme */
 html.theme-light .bg-slate-800,
-html.theme-light .bg-slate-900,
-html.theme-light .bg-slate-700,
+html.theme-light .bg-slate-800\/40,
 html.theme-light .bg-slate-800\/50,
-html.theme-light .bg-slate-900\/50 {
-    background-color: #f8fafc;
-    /* slate-50 */
+html.theme-light .bg-slate-800\/60,
+html.theme-light .bg-slate-800\/80,
+html.theme-light .bg-slate-800\/90,
+html.theme-light .bg-slate-900,
+html.theme-light .bg-slate-900\/40,
+html.theme-light .bg-slate-900\/50,
+html.theme-light .bg-slate-900\/60,
+html.theme-light .bg-slate-900\/80 {
+    background-color: #ffffff;
     color: #0f172a;
     border-color: #e2e8f0;
-    /* slate-200 */
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.05);
 }
 
-html.theme-light .bg-slate-900 {
-    background-color: #ffffff;
-    /* pure white for some containers */
+html.theme-light .bg-slate-700,
+html.theme-light .bg-slate-700\/40,
+html.theme-light .bg-slate-700\/50,
+html.theme-light .bg-slate-700\/60,
+html.theme-light .bg-slate-700\/80,
+html.theme-light .bg-slate-700\/90 {
+    background-color: #f8fafc;
+    color: #0f172a;
     border-color: #e2e8f0;
+}
+
+/* Inner pills / badges in Light Theme */
+html.theme-light .bg-slate-900\/90,
+html.theme-light .bg-slate-900\/80,
+html.theme-light .bg-slate-900\/50,
+html.theme-light .bg-slate-900\/40 {
+    background-color: #f1f5f9;
+    color: #0f172a;
+    border-color: #cbd5e1;
 }
 
 /* Specific Border Overrides */
 html.theme-light .border-slate-700,
+html.theme-light .border-slate-700\/80,
+html.theme-light .border-slate-700\/60,
+html.theme-light .border-slate-700\/50,
+html.theme-light .border-slate-800,
+html.theme-light .border-slate-800\/80,
+html.theme-light .border-slate-800\/60,
 html.theme-light .border-white\/10 {
     border-color: #e2e8f0;
-    /* slate-200 */
 }
 
 /* Text Color Overrides */
 html.theme-light .text-white {
     color: #0f172a;
-    /* slate-900 */
+}
+
+html.theme-light .text-slate-200 {
+    color: #1e293b;
 }
 
 html.theme-light .text-slate-300 {
     color: #334155;
-    /* slate-700 */
 }
 
 html.theme-light .text-slate-400 {

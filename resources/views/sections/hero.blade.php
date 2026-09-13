@@ -58,7 +58,7 @@
                             </span>
                             <div class="flex flex-col">
                                 <span class="text-xs text-cyan-400 uppercase tracking-wider font-medium">Status</span>
-                                <span class="text-sm font-bold text-white leading-none">Full-Stack Dev</span>
+                                <span class="text-sm font-bold text-white leading-none">Ingénieur Logiciel</span>
                             </div>
                         </div>
                     </div>

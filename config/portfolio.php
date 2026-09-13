@@ -9,8 +9,8 @@ return [
 
     'owner' => [
         'name' => 'Adama Traoré',
-        'title' => 'Développeur Full-Stack',
-        'status' => 'Full-Stack Dev',
+        'title' => 'Ingénieur en Conception Logicielle',
+        'status' => 'Ingénieur Logiciel',
         'email' => 'traoreadama.dev@gmail.com',
         'github' => 'https://github.com/adama-traore-github',
         'linkedin' => 'https://www.linkedin.com/in/adama-traore-dev/',
@@ -345,8 +345,9 @@ return [
         ],
         [
             'duration' => '2 ans',
-            'period' => '2023 – 2025',
+            'period' => 'Oct. 2024 – Présent',
             'company' => 'ETP4A',
+            'location_type' => 'Remote',
             'role_key' => 'full_stack_dev',
             'type_key' => 'part_time',
             'linkedin' => 'https://www.linkedin.com/company/etp4africa/',

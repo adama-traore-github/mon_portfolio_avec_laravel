@@ -1,36 +1,82 @@
-<section id="about" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-20 flex flex-col md:flex-row gap-12 items-center min-h-screen justify-center scroll-mt-20">
+<section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-screen flex flex-col justify-center scroll-mt-20">
     
-    <div class="w-full md:w-1/3">
-        <div class="relative">
-            <div class="absolute inset-0 bg-blue-500 blur-2xl opacity-20 transform rotate-12 rounded-3xl"></div>
-            <img src="{{ asset('images/adama.png') }}" alt="Adama Traoré" class="relative z-10 rounded-3xl shadow-2xl border-2 border-white/10 w-full object-cover">
+    <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+        
+        <!-- Left Visual Side -->
+        <div class="w-full lg:w-5/12 flex justify-center">
+            <div class="relative w-64 sm:w-80 group">
+                <div class="absolute inset-0 bg-gradient-to-tr from-cyan-500 to-blue-600 rounded-3xl blur-xl opacity-30 group-hover:opacity-50 transition-opacity"></div>
+                <div class="relative z-10 rounded-3xl overflow-hidden border-2 border-slate-700/80 group-hover:border-cyan-500/80 transition-colors shadow-2xl">
+                    <img src="{{ asset('images/adama.png') }}" alt="Adama Traoré" class="w-full h-auto object-cover transform group-hover:scale-105 transition-transform duration-500">
+                </div>
+                <!-- Experience Badge floating -->
+                <div class="absolute -bottom-4 -right-4 z-20 bg-slate-900 border border-slate-700/80 rounded-2xl p-4 shadow-xl flex items-center gap-3">
+                    <div class="w-10 h-10 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center font-bold text-lg">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                    </div>
+                    <div>
+                        <span class="text-xs text-slate-400 block font-medium">Diplôme</span>
+                        <span class="text-xs font-bold text-white leading-tight block">Ingénieur Génie Logiciel</span>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <div class="w-full md:w-2/3 space-y-8 text-left">
-        <div>
-            <h2 class="text-4xl font-bold text-white mb-2">Adama Traoré</h2>
-            <h3 class="text-2xl text-cyan-400 font-medium">Développeur Full-Stack & Blockchain</h3>
-        </div>
+        <!-- Right Content Side -->
+        <div class="w-full lg:w-7/12 space-y-6">
+            
+            <div>
+                <span class="text-xs font-extrabold uppercase tracking-widest text-cyan-400 block mb-1">À Propos De Moi</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Adama Traoré</h2>
+                <h3 class="text-lg font-semibold text-cyan-400 mt-1">Ingénieur en Conception Logicielle</h3>
+            </div>
 
-        <div class="bg-slate-800/50 p-8 rounded-2xl border-l-4 border-cyan-500 backdrop-blur-sm">
-            <p class="text-slate-300 text-lg leading-relaxed text-justify">
-                <strong class="text-white">Développeur Full-Stack</strong> avec une expertise avérée dans la conception et le déploiement d'applications web et mobiles performantes. Ma maîtrise de <strong class="text-white">Flutter</strong> me permet de développer des applications cross-plateforme fluides, tandis que mon expertise en développement web frontend (<strong class="text-white">HTML5, CSS3, JavaScript/TypeScript</strong>) et backend (<strong class="text-white">Node.js, Ruby on Rails, Django</strong>) assure des solutions complètes et évolutives.
-                <br><br>
-                J'ai approfondi mes compétences dans des domaines stratégiques comme l'<strong class="text-white">intelligence artificielle</strong>, l'automatisation des processus, et la <strong class="text-white">blockchain</strong> (développement de smart contracts et intégration de solutions décentralisées). Mon expérience avec les bases de données relationnelles (<strong class="text-white">PostgreSQL, MySQL</strong>) et les solutions cloud comme <strong class="text-white">Supabase</strong> me permet de concevoir des architectures robustes et sécurisées.
-                <br><br>
-                Guidé par une curiosité intellectuelle constante, je m'engage dans un processus d'apprentissage continu pour maîtriser les dernières avancées technologiques. Mon approche centrée sur l'utilisateur et mon souci du détail technique font de moi un partenaire idéal pour transformer des idées innovantes en solutions logicielles performantes et évolutives.
+            <!-- Concise Professional Intro -->
+            <p class="text-slate-300 text-base leading-relaxed">
+                Ingénieur en Génie Logiciel, je conçois et déploie des solutions digitales haute performance. 
+                Alliant <strong class="text-white">rigueur architecturale</strong> et maîtrise des technologies modernes (<strong class="text-cyan-400">Laravel, Flutter, Node.js</strong>), j'accompagne la transformation d'idées stratégiques en logiciels fiables, évolutifs et sécurisés.
             </p>
-        </div>
 
-        <div class="flex gap-4">
-            <a href="#contact" class="px-6 py-3 bg-white text-slate-900 font-bold rounded-lg hover:bg-slate-200 transition-colors">
-                {{ __('Contact me') }}
-            </a>
-            <a href="https://github.com/adama-traore-github" target="_blank" class="px-6 py-3 border border-slate-600 text-white font-bold rounded-lg hover:border-white transition-colors flex items-center">
-                <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24"><path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" clip-rule="evenodd" /></svg>
-                Github
-            </a>
+            <!-- 3 Key Pillars -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 hover:border-cyan-500/50 transition-all">
+                    <div class="text-cyan-400 text-lg mb-2">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h4 class="text-sm font-bold text-white mb-1">Architecture & Clean Code</h4>
+                    <p class="text-slate-400 text-xs leading-normal">Conception logicielle structurée, modélisation objet et APIs REST scalables.</p>
+                </div>
+
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 hover:border-cyan-500/50 transition-all">
+                    <div class="text-purple-400 text-lg mb-2">
+                        <i class="fa-solid fa-mobile-screen-button"></i>
+                    </div>
+                    <h4 class="text-sm font-bold text-white mb-1">Web & Mobile Multi-plateforme</h4>
+                    <p class="text-slate-400 text-xs leading-normal">Applications fluides sur le web et les magasins d'applications mobiles (iOS/Android).</p>
+                </div>
+
+                <div class="bg-slate-800/60 border border-slate-700/80 rounded-xl p-4 hover:border-cyan-500/50 transition-all">
+                    <div class="text-green-400 text-lg mb-2">
+                        <i class="fa-solid fa-microchip"></i>
+                    </div>
+                    <h4 class="text-sm font-bold text-white mb-1">Innovation & Automation</h4>
+                    <p class="text-slate-400 text-xs leading-normal">Intégration d'outils IA, protocoles Web3 et pipelines DevOps automatisés.</p>
+                </div>
+            </div>
+
+            <!-- Call to Actions -->
+            <div class="pt-4 flex flex-wrap items-center gap-4">
+                <a href="#contact" class="px-6 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-xl transition-all text-sm inline-flex items-center gap-2 shadow-lg shadow-cyan-500/20">
+                    <i class="fa-solid fa-paper-plane"></i>
+                    <span>Me contacter</span>
+                </a>
+                <a href="https://github.com/adama-traore-github" target="_blank" rel="noopener noreferrer" class="px-6 py-3 bg-slate-800 hover:bg-slate-700 text-white font-semibold border border-slate-700 rounded-xl transition-all text-sm inline-flex items-center gap-2">
+                    <i class="fa-brands fa-github"></i>
+                    <span>Profil GitHub</span>
+                </a>
+            </div>
+
         </div>
     </div>
+
 </section>

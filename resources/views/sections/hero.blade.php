@@ -51,7 +51,7 @@
 
                     <!-- Floating Badge (Bottom Left) -->
                     <div class="absolute bottom-[10%] -left-[5%] z-20 animate-bounce-slow">
-                        <div class="bg-black/80 border border-cyan-500/30 rounded-xl py-3 px-5 flex items-center gap-3 shadow-lg backdrop-blur-md">
+                        <div class="bg-slate-900 border border-cyan-500/30 rounded-xl py-3 px-5 flex items-center gap-3 shadow-lg backdrop-blur-md">
                             <span class="relative flex h-2.5 w-2.5">
                                 <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                                 <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-green-500"></span>

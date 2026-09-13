@@ -16,6 +16,9 @@ class PageController extends Controller
         return view('pages.home', [
             'projects' => $this->portfolioService->getProjects(),
             'experiences' => $this->portfolioService->getExperiences(),
+            'coreStack' => $this->portfolioService->getCoreStack(),
+            'skillCategories' => $this->portfolioService->getSkillCategories(),
+            'knowhows' => $this->portfolioService->getKnowhows(),
             'owner' => $this->portfolioService->getOwner(),
         ]);
     }

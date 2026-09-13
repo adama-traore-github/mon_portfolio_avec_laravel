@@ -5,7 +5,11 @@
 @section('content')
     @include('sections.hero')
     @include('sections.projects', ['projects' => $projects])
-    @include('sections.skills')
+    @include('sections.skills', [
+        'coreStack' => $coreStack,
+        'skillCategories' => $skillCategories,
+        'knowhows' => $knowhows,
+    ])
     @include('sections.experience', ['experiences' => $experiences])
     @include('sections.certifications')
     @include('sections.about')

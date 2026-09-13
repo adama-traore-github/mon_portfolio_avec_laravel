@@ -1,291 +1,139 @@
 <section id="skills" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-screen flex flex-col justify-center scroll-mt-20">
     
-    <!-- Section Technique -->
-    <h2 class="text-4xl md:text-5xl font-bold text-white mb-4 text-center">
-        {!! __('Technical Arsenal') !!}
-    </h2>
-    <p class="text-slate-400 text-center mb-16 max-w-2xl mx-auto">{{ __('The tools and technologies I use daily to build robust solutions.') }}</p>
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+        <h2 class="text-4xl md:text-5xl font-bold text-white mb-4">
+            {!! __('Technical Arsenal') !!}
+        </h2>
+        <p class="text-slate-400 max-w-2xl mx-auto text-base">
+            {{ __('The tools and technologies I use daily to build robust solutions.') }}
+        </p>
+    </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
-        <!-- Langages -->
-        <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 hover:border-blue-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20">
-            <h3 class="text-xl font-bold text-blue-400 mb-6 flex items-center">
-                <svg class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                </svg>
-                {{ __('Languages') }}
-            </h3>
-            <ul class="space-y-3 text-slate-300">
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-yellow-400/10 rounded-lg mr-3 group-hover:bg-yellow-400/20 transition-colors">
-                        <i class="fab fa-js text-yellow-400"></i>
-                    </span>
-                    <span>JavaScript</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-orange-500/10 rounded-lg mr-3 group-hover:bg-orange-500/20 transition-colors">
-                        <i class="fab fa-php text-orange-500"></i>
-                    </span>
-                    <span>PHP</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-orange-600/10 rounded-lg mr-3 group-hover:bg-orange-600/20 transition-colors">
-                        <i class="fab fa-html5 text-orange-600"></i>
-                    </span>
-                    <span>HTML5</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-blue-600/10 rounded-lg mr-3 group-hover:bg-blue-600/20 transition-colors">
-                        <i class="fab fa-css3-alt text-blue-600"></i>
-                    </span>
-                    <span>CSS3</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-red-700/10 rounded-lg mr-3 group-hover:bg-red-700/20 transition-colors">
-                        <i class="fas fa-gem text-red-700"></i>
-                    </span>
-                    <span>Ruby</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-blue-500/10 rounded-lg mr-3 group-hover:bg-blue-500/20 transition-colors">
-                        <i class="fab fa-python text-blue-500"></i>
-                    </span>
-                    <span>Python</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-white/80 rounded-lg mr-3 group-hover:bg-blue-50 transition-colors">
-                        <i class="fas fa-code text-blue-600"></i>
-                    </span>
-                    <span>Dart</span>
-                </li>
-            </ul>
-        </div>
+    <!-- 1. CORE STACK SHOWCASE (Stack Phare) -->
+    <div class="mb-20">
+        <h3 class="text-xs font-extrabold uppercase tracking-widest text-cyan-400 mb-6 text-center flex items-center justify-center gap-2">
+            <span class="w-8 h-px bg-cyan-500/50"></span>
+            <i class="fa-solid fa-star text-amber-400"></i> Core Tech Stack (Technologies Principales)
+            <span class="w-8 h-px bg-cyan-500/50"></span>
+        </h3>
 
-        <!-- Frameworks -->
-        <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 hover:border-green-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:shadow-green-500/20">
-            <h3 class="text-xl font-bold text-green-400 mb-6 flex items-center">
-                <svg class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
-                </svg>
-                Frameworks
-            </h3>
-            <ul class="space-y-3 text-slate-300">
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-red-600/10 rounded-lg mr-3 group-hover:bg-red-600/20 transition-colors">
-                        <i class="fab fa-laravel text-red-600"></i>
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
+            @foreach($coreStack as $tech)
+                @php
+                    $colors = [
+                        'red' => 'border-red-500/30 shadow-red-500/10 text-red-400 bg-red-500/10',
+                        'cyan' => 'border-cyan-500/30 shadow-cyan-500/10 text-cyan-400 bg-cyan-500/10',
+                        'green' => 'border-green-500/30 shadow-green-500/10 text-green-400 bg-green-500/10',
+                        'emerald' => 'border-emerald-500/30 shadow-emerald-500/10 text-emerald-400 bg-emerald-500/10',
+                        'blue' => 'border-blue-500/30 shadow-blue-500/10 text-blue-400 bg-blue-500/10',
+                    ];
+                    $badgeTheme = $colors[$tech['color']] ?? $colors['cyan'];
+                @endphp
+                <div class="group bg-slate-900/90 rounded-2xl p-4 border border-slate-800 hover:border-cyan-500/60 transition-all duration-300 transform hover:-translate-y-1.5 hover:shadow-xl text-center flex flex-col items-center justify-between">
+                    <div class="w-12 h-12 rounded-xl flex items-center justify-center text-2xl mb-3 {{ $badgeTheme }} group-hover:scale-110 transition-transform">
+                        @if($tech['icon'] === 'fa-flutter')
+                            <svg width="24" height="24" viewBox="0 0 256 314" class="fill-current"><path d="M157.666 0L0 160.013l48.272 48.27 48.27-48.27L78.54 83.03l29.002-29.002 50.124 50.124 50.124-50.124L157.666 0z"/><path d="M157.666 0L78.54 79.126l29.002 29.002 50.124-50.124 50.124 50.124 29.002-29.002L157.666 0z"/><path d="M96.542 160.013l-48.27 48.27L96.54 256.4l29.002-48.117 32.124-48.27-53.124 0z"/></svg>
+                        @elseif($tech['icon_type'] === 'brand')
+                            <i class="fa-brands {{ $tech['icon'] }}"></i>
+                        @else
+                            <i class="fa-solid {{ $tech['icon'] }}"></i>
+                        @endif
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-bold text-white group-hover:text-cyan-400 transition-colors">{{ $tech['name'] }}</h4>
+                        <span class="text-[11px] font-semibold text-slate-400 block mt-0.5">{{ $tech['level'] }}</span>
+                    </div>
+                    <span class="mt-2 text-[10px] uppercase tracking-wider font-semibold px-2 py-0.5 rounded-full bg-slate-800 text-slate-400 border border-slate-700/50">
+                        {{ $tech['experience'] }}
                     </span>
-                    <span>Laravel</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-green-600/10 rounded-lg mr-3 group-hover:bg-green-600/20 transition-colors">
-                        <i class="fab fa-node-js text-green-600"></i>
-                    </span>
-                    <span>Node.js</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-gray-700/10 rounded-lg mr-3 group-hover:bg-gray-700/20 transition-colors">
-                        <i class="fab fa-node text-gray-700"></i>
-                    </span>
-                    <span>Express.js</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-red-700/10 rounded-lg mr-3 group-hover:bg-red-700/20 transition-colors">
-                        <i class="fas fa-gem text-red-700"></i>
-                    </span>
-                    <span>Ruby on Rails</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-blue-500 rounded-lg mr-3 group-hover:bg-blue-600 transition-colors">
-                        <svg width="16" height="16" viewBox="0 0 256 314" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
-                            <path d="M157.666 0L0 160.013l48.272 48.27 48.27-48.27L78.54 83.03l29.002-29.002 50.124 50.124 50.124-50.124L157.666 0z" fill="#fff"/>
-                            <path d="M157.666 0L78.54 79.126l29.002 29.002 50.124-50.124 50.124 50.124 29.002-29.002L157.666 0z" fill="#03A9F4"/>
-                            <path d="M96.542 160.013l-48.27 48.27L96.54 256.4l29.002-48.117 32.124-48.27-53.124 0z" fill="#01579B"/>
-                            <path d="M157.666 221.137l-32.124 48.27L157.666 314l78.126-78.126-29.002-29.002-19.124 19.124 10.124 10.124-10.124 10.124-19.124-19.123-19.124 19.123-10.124-10.124 10.124-10.124-10.124-10.124 10.124-10.124 19.124 19.123 19.124-19.123 10.124 10.124-10.124 10.124 10.124 10.124z" fill="#03A9F4"/>
-                        </svg>
-                    </span>
-                    <span>Flutter</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-purple-600/10 rounded-lg mr-3 group-hover:bg-purple-600/20 transition-colors">
-                        <i class="fab fa-bootstrap text-purple-600"></i>
-                    </span>
-                    <span>Bootstrap</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-cyan-400/10 rounded-lg mr-3 group-hover:bg-cyan-400/20 transition-colors">
-                        <i class="fab fa-css3-alt text-cyan-400"></i>
-                    </span>
-                    <span>Tailwind CSS</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Blockchain -->
-        <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
-            <h3 class="text-xl font-bold text-purple-400 mb-6 flex items-center">
-                <svg class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                Blockchain
-            </h3>
-            <ul class="space-y-3 text-slate-300">
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-yellow-500/10 rounded-lg mr-3 group-hover:bg-yellow-500/20 transition-colors">
-                        <i class="fas fa-file-contract text-yellow-500"></i>
-                    </span>
-                    <span>{{ __('Smart Contracts') }}</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-blue-500/10 rounded-lg mr-3 group-hover:bg-blue-500/20 transition-colors">
-                        <i class="fas fa-cube text-blue-500"></i>
-                    </span>
-                    <span>{{ __('Web3 Integration') }}</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-green-500/10 rounded-lg mr-3 group-hover:bg-green-500/20 transition-colors">
-                        <i class="fas fa-coins text-green-500"></i>
-                    </span>
-                    <span>{{ __('Token Management') }}</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Bases de données -->
-        <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 hover:border-emerald-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:shadow-emerald-500/20">
-            <h3 class="text-xl font-bold text-emerald-400 mb-6 flex items-center">
-                <svg class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" /></svg>
-                Bases de données
-            </h3>
-            <ul class="space-y-3 text-slate-300">
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-green-500/10 rounded-lg mr-3 group-hover:bg-green-500/20 transition-colors">
-                        <i class="fas fa-database text-green-500"></i>
-                    </span>
-                    <span>Supabase</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-blue-700/10 rounded-lg mr-3 group-hover:bg-blue-700/20 transition-colors">
-                        <i class="fas fa-database text-blue-700"></i>
-                    </span>
-                    <span>PostgreSQL</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-orange-500/10 rounded-lg mr-3 group-hover:bg-orange-500/20 transition-colors">
-                        <i class="fas fa-database text-orange-500"></i>
-                    </span>
-                    <span>MySQL</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-amber-500/10 rounded-lg mr-3 group-hover:bg-amber-500/20 transition-colors">
-                        <i class="fas fa-fire text-amber-500"></i>
-                    </span>
-                    <span>Firebase</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Outils -->
-        <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 hover:border-cyan-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20">
-            <h3 class="text-xl font-bold text-cyan-400 mb-6 flex items-center">
-                <svg class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                Outils
-            </h3>
-            <ul class="space-y-3 text-slate-300">
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-orange-500/10 rounded-lg mr-3 group-hover:bg-orange-500/20 transition-colors">
-                        <i class="fab fa-git-alt text-orange-500"></i>
-                    </span>
-                    <span>Git & GitHub</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-blue-500/10 rounded-lg mr-3 group-hover:bg-blue-500/20 transition-colors">
-                        <i class="fab fa-github text-blue-500"></i>
-                    </span>
-                    <span>GitHub</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-amber-500/10 rounded-lg mr-3 group-hover:bg-amber-500/20 transition-colors">
-                        <i class="fas fa-tools text-amber-500"></i>
-                    </span>
-                    <span>CI/CD</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-blue-600/10 rounded-lg mr-3 group-hover:bg-blue-600/20 transition-colors">
-                        <i class="fab fa-trello text-blue-600"></i>
-                    </span>
-                    <span>Trello</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-white border border-gray-200 rounded-lg mr-3 group-hover:border-blue-400 transition-colors">
-                        <i class="fab fa-docker text-blue-400"></i>
-                    </span>
-                    <span>Docker</span>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Process -->
-        <div class="bg-slate-800/50 rounded-2xl p-6 border border-slate-700 hover:border-purple-500 transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20">
-            <h3 class="text-xl font-bold text-purple-400 mb-6 flex items-center">
-                <svg class="w-6 h-6 mr-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-7 7m0 0a7 7 0 01-7-7m7 7v4m0 0H8m4 0h4m-4-8a3 3 0 01-3-3V5a3 3 0 116 0v6a3 3 0 01-3 3z" />
-                </svg>
-                Process
-            </h3>
-            <ul class="space-y-3 text-slate-300">
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-purple-600/10 rounded-lg mr-3 group-hover:bg-purple-600/20 transition-colors">
-                        <i class="fas fa-sync-alt text-purple-600"></i>
-                    </span>
-                    <span>{{ __('Agile Methodology') }}</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-blue-500/10 rounded-lg mr-3 group-hover:bg-blue-500/20 transition-colors">
-                        <i class="fas fa-project-diagram text-blue-500"></i>
-                    </span>
-                    <span>{{ __('Project Management') }}</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-green-500/10 rounded-lg mr-3 group-hover:bg-green-500/20 transition-colors">
-                        <i class="fas fa-code-branch text-green-500"></i>
-                    </span>
-                    <span>{{ __('Code Reviews') }}</span>
-                </li>
-                <li class="flex items-center group">
-                    <span class="w-8 h-8 flex items-center justify-center bg-yellow-500/10 rounded-lg mr-3 group-hover:bg-yellow-500/20 transition-colors">
-                        <i class="fas fa-comments text-yellow-500"></i>
-                    </span>
-                    <span>{{ __('Retrospectives') }}</span>
-                </li>
-            </ul>
+                </div>
+            @endforeach
         </div>
     </div>
 
-    <!-- Section Savoir-faire -->
-    <h2 class="text-3xl md:text-4xl font-bold text-white mb-12 text-center">{!! __('What I know') !!}</h2>
-    
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        @php
-            $knowhows = [
-                ['title' => __('Solutions Complètes'), 'desc' => __('desc_Solutions Complètes')],
-                ['title' => __('Agile Methodology'), 'desc' => __('desc_Méthodologie Agile')],
-                ['title' => __('Intégration Blockchain'), 'desc' => __('desc_Intégration Blockchain')],
-                ['title' => __('Maîtrise des Bases de Données'), 'desc' => __('desc_Maîtrise des Bases de Données')],
-                ['title' => __('DevOps & CI/CD'), 'desc' => __('desc_DevOps & CI/CD')],
-                ['title' => __('Logique Backend'), 'desc' => __('desc_Logique Backend')],
-                ['title' => __('UX Frontend'), 'desc' => __('desc_UX Frontend')],
-                ['title' => __('Architecture du Code'), 'desc' => __('desc_Architecture du Code')],
-                ['title' => __('Boost IA'), 'desc' => __('desc_Boost IA')],
-            ];
-        @endphp
+    <!-- 2. SKILL CATEGORIES GRID -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-24">
+        @foreach($skillCategories as $cat)
+            @php
+                $catColors = [
+                    'blue' => 'text-blue-400 border-blue-500/30 hover:border-blue-500 hover:shadow-blue-500/20',
+                    'green' => 'text-green-400 border-green-500/30 hover:border-green-500 hover:shadow-green-500/20',
+                    'purple' => 'text-purple-400 border-purple-500/30 hover:border-purple-500 hover:shadow-purple-500/20',
+                    'emerald' => 'text-emerald-400 border-emerald-500/30 hover:border-emerald-500 hover:shadow-emerald-500/20',
+                    'cyan' => 'text-cyan-400 border-cyan-500/30 hover:border-cyan-500 hover:shadow-cyan-500/20',
+                ];
+                $themeClass = $catColors[$cat['color']] ?? $catColors['cyan'];
+            @endphp
+            <div class="bg-slate-800/60 rounded-2xl p-6 border border-slate-700/80 transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl flex flex-col justify-between backdrop-blur-md">
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-6 flex items-center justify-between">
+                        <span class="flex items-center gap-2">
+                            <i class="fa-solid {{ $cat['icon'] }} {{ explode(' ', $themeClass)[0] }}"></i>
+                            {{ __($cat['title']) }}
+                        </span>
+                        <span class="text-xs px-2.5 py-0.5 rounded-full bg-slate-900/90 text-slate-400 border border-slate-700/50">
+                            {{ count($cat['items']) }}
+                        </span>
+                    </h3>
 
-        @foreach($knowhows as $item)
-        <div class="bg-slate-900 border border-slate-800 p-6 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:scale-105 hover:shadow-2xl hover:shadow-cyan-500/20 hover:border-cyan-500">
-            <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{{ $item['title'] }}</h3>
-            <p class="text-slate-400 text-sm group-hover:text-slate-300 transition-colors">{{ $item['desc'] }}</p>
-        </div>
+                    <ul class="space-y-3">
+                        @foreach($cat['items'] as $item)
+                            <li class="flex items-center justify-between group p-1.5 rounded-lg hover:bg-slate-900/50 transition-colors">
+                                <div class="flex items-center">
+                                    <span class="w-8 h-8 flex items-center justify-center bg-slate-900 rounded-lg mr-3 text-slate-300 group-hover:text-cyan-400 group-hover:scale-110 transition-all border border-slate-700/50">
+                                        @if(str_contains($item['icon'], 'fa-'))
+                                            @if(in_array($item['icon'], ['fa-js', 'fa-php', 'fa-html5', 'fa-python', 'fa-laravel', 'fa-node-js', 'fa-docker', 'fa-git-alt', 'fa-trello']))
+                                                <i class="fa-brands {{ $item['icon'] }}"></i>
+                                            @else
+                                                <i class="fa-solid {{ $item['icon'] }}"></i>
+                                            @endif
+                                        @else
+                                            <i class="fa-solid fa-code"></i>
+                                        @endif
+                                    </span>
+                                    <span class="text-sm font-medium text-slate-200 group-hover:text-white transition-colors">{{ $item['name'] }}</span>
+                                </div>
+                                <span class="text-xs font-semibold px-2 py-0.5 rounded bg-slate-900/80 text-slate-400 border border-slate-800">
+                                    {{ $item['level'] }}
+                                </span>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
         @endforeach
+    </div>
+
+    <!-- 3. SAVOIR-FAIRE & EXPERTISE GRID -->
+    <div class="pt-8">
+        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4 text-center">{!! __('What I know') !!}</h2>
+        <p class="text-slate-400 text-center mb-12 max-w-2xl mx-auto text-sm">
+            Mon expertise métier va au-delà des lignes de code : conception globale, sécurité, passage à l'échelle et intégrations complexes.
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            @foreach($knowhows as $item)
+                @php
+                    $glowColors = [
+                        'cyan' => 'hover:border-cyan-500/80 hover:shadow-cyan-500/20 text-cyan-400',
+                        'green' => 'hover:border-green-500/80 hover:shadow-green-500/20 text-green-400',
+                        'purple' => 'hover:border-purple-500/80 hover:shadow-purple-500/20 text-purple-400',
+                        'yellow' => 'hover:border-yellow-500/80 hover:shadow-yellow-500/20 text-yellow-400',
+                        'emerald' => 'hover:border-emerald-500/80 hover:shadow-emerald-500/20 text-emerald-400',
+                        'blue' => 'hover:border-blue-500/80 hover:shadow-blue-500/20 text-blue-400',
+                    ];
+                    $glowTheme = $glowColors[$item['color']] ?? $glowColors['cyan'];
+                @endphp
+                <div class="group bg-slate-900/90 border border-slate-800 p-6 rounded-2xl transition-all duration-300 transform hover:-translate-y-1 hover:shadow-2xl {{ $glowTheme }}">
+                    <div class="w-12 h-12 rounded-xl bg-slate-800 flex items-center justify-center text-xl mb-4 {{ explode(' ', $glowTheme)[2] }} group-hover:scale-110 transition-transform">
+                        <i class="fa-solid {{ $item['icon'] }}"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">{{ $item['title'] }}</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed group-hover:text-slate-300 transition-colors">{{ $item['desc'] }}</p>
+                </div>
+            @endforeach
+        </div>
     </div>
 
 </section>

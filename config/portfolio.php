@@ -16,6 +16,103 @@ return [
         'linkedin' => 'https://www.linkedin.com/in/adama-traore-dev/',
     ],
 
+    'core_stack' => [
+        ['name' => 'Laravel', 'level' => 'Expert / Avancé', 'icon' => 'fa-laravel', 'icon_type' => 'brand', 'color' => 'red', 'experience' => '3+ ans'],
+        ['name' => 'Flutter', 'level' => 'Maîtrisé', 'icon' => 'fa-flutter', 'icon_type' => 'custom', 'color' => 'cyan', 'experience' => '2+ ans'],
+        ['name' => 'Node.js & Express', 'level' => 'Avancé', 'icon' => 'fa-node-js', 'icon_type' => 'brand', 'color' => 'green', 'experience' => '2+ ans'],
+        ['name' => 'TailwindCSS', 'level' => 'Expert', 'icon' => 'fa-css3-alt', 'icon_type' => 'brand', 'color' => 'cyan', 'experience' => '3+ ans'],
+        ['name' => 'PostgreSQL & MySQL', 'level' => 'Avancé', 'icon' => 'fa-database', 'icon_type' => 'solid', 'color' => 'emerald', 'experience' => '3+ ans'],
+        ['name' => 'Docker & DevOps', 'level' => 'Pratique', 'icon' => 'fa-docker', 'icon_type' => 'brand', 'color' => 'blue', 'experience' => '2 ans'],
+    ],
+
+    'skill_categories' => [
+        [
+            'id' => 'languages',
+            'title' => 'Langages',
+            'icon' => 'fa-code',
+            'color' => 'blue',
+            'items' => [
+                ['name' => 'JavaScript (ES6+)', 'level' => 'Expert', 'icon' => 'fa-js', 'color' => 'yellow'],
+                ['name' => 'PHP 8+', 'level' => 'Expert', 'icon' => 'fa-php', 'color' => 'orange'],
+                ['name' => 'HTML5 & CSS3', 'level' => 'Expert', 'icon' => 'fa-html5', 'color' => 'orange'],
+                ['name' => 'Ruby', 'level' => 'Intermédiaire', 'icon' => 'fa-gem', 'color' => 'red'],
+                ['name' => 'Python', 'level' => 'Avancé', 'icon' => 'fa-python', 'color' => 'blue'],
+                ['name' => 'Dart', 'level' => 'Avancé', 'icon' => 'fa-code', 'color' => 'cyan'],
+                ['name' => 'Java', 'level' => 'Intermédiaire', 'icon' => 'fa-mug-hot', 'color' => 'amber'],
+            ]
+        ],
+        [
+            'id' => 'frameworks',
+            'title' => 'Frameworks & Libs',
+            'icon' => 'fa-cubes',
+            'color' => 'green',
+            'items' => [
+                ['name' => 'Laravel 11/12', 'level' => 'Expert', 'icon' => 'fa-laravel', 'color' => 'red'],
+                ['name' => 'Node.js & Express', 'level' => 'Avancé', 'icon' => 'fa-node-js', 'color' => 'green'],
+                ['name' => 'Ruby on Rails', 'level' => 'Avancé', 'icon' => 'fa-gem', 'color' => 'red'],
+                ['name' => 'Flutter', 'level' => 'Avancé', 'icon' => 'fa-mobile-screen', 'color' => 'cyan'],
+                ['name' => 'Bootstrap & Tailwind', 'level' => 'Expert', 'icon' => 'fa-css3-alt', 'color' => 'purple'],
+                ['name' => 'Django', 'level' => 'Intermédiaire', 'icon' => 'fa-python', 'color' => 'emerald'],
+            ]
+        ],
+        [
+            'id' => 'blockchain',
+            'title' => 'Blockchain & Web3',
+            'icon' => 'fa-link',
+            'color' => 'purple',
+            'items' => [
+                ['name' => 'Smart Contracts', 'level' => 'Pratique', 'icon' => 'fa-file-contract', 'color' => 'yellow'],
+                ['name' => 'Intégration Web3', 'level' => 'Pratique', 'icon' => 'fa-cube', 'color' => 'blue'],
+                ['name' => 'Token Management', 'level' => 'Avancé', 'icon' => 'fa-coins', 'color' => 'green'],
+            ]
+        ],
+        [
+            'id' => 'databases',
+            'title' => 'Bases de données',
+            'icon' => 'fa-database',
+            'color' => 'emerald',
+            'items' => [
+                ['name' => 'PostgreSQL', 'level' => 'Avancé', 'icon' => 'fa-database', 'color' => 'blue'],
+                ['name' => 'MySQL', 'level' => 'Expert', 'icon' => 'fa-database', 'color' => 'orange'],
+                ['name' => 'Supabase', 'level' => 'Avancé', 'icon' => 'fa-bolt', 'color' => 'emerald'],
+                ['name' => 'Firebase', 'level' => 'Pratique', 'icon' => 'fa-fire', 'color' => 'amber'],
+            ]
+        ],
+        [
+            'id' => 'tools',
+            'title' => 'DevOps & Outils',
+            'icon' => 'fa-screwdriver-wrench',
+            'color' => 'cyan',
+            'items' => [
+                ['name' => 'Git & GitHub', 'level' => 'Expert', 'icon' => 'fa-git-alt', 'color' => 'orange'],
+                ['name' => 'Docker', 'level' => 'Pratique', 'icon' => 'fa-docker', 'color' => 'blue'],
+                ['name' => 'CI/CD Pipelines', 'level' => 'Avancé', 'icon' => 'fa-sliders', 'color' => 'indigo'],
+                ['name' => 'Trello / Jira', 'level' => 'Avancé', 'icon' => 'fa-trello', 'color' => 'blue'],
+            ]
+        ],
+        [
+            'id' => 'process',
+            'title' => 'Méthodologies',
+            'icon' => 'fa-diagram-project',
+            'color' => 'purple',
+            'items' => [
+                ['name' => 'Méthodologie Agile / Scrum', 'level' => 'Pratique régulière', 'icon' => 'fa-rotate', 'color' => 'purple'],
+                ['name' => 'Gestion de Projet', 'level' => 'Pratique', 'icon' => 'fa-tasks', 'color' => 'blue'],
+                ['name' => 'Code Reviews & Quality', 'level' => 'Exigeant', 'icon' => 'fa-code-branch', 'color' => 'green'],
+                ['name' => 'Assistance IA & Prompting', 'level' => 'Expert', 'icon' => 'fa-robot', 'color' => 'cyan'],
+            ]
+        ],
+    ],
+
+    'knowhows' => [
+        ['title' => 'Solutions Web & Mobile Complètes', 'desc' => 'Conception de bout en bout de plateformes web réactives et d’applications mobiles multi-plateformes.', 'icon' => 'fa-laptop-code', 'color' => 'cyan'],
+        ['title' => 'Architecture API REST & Microservices', 'desc' => 'Développement d’API backend performantes, sécurisées et intégrées avec Stripe, Supabase et JWT.', 'icon' => 'fa-network-wire', 'color' => 'green'],
+        ['title' => 'Méthodologie Agile & Scrum', 'desc' => 'Conduite de projets selon les principes agiles avec itérations rapides et revues de code rigoureuses.', 'icon' => 'fa-sync', 'color' => 'purple'],
+        ['title' => 'Intégration Web3 & Smart Contracts', 'desc' => 'Développement de Token Managers et connexion d’applications décentralisées aux protocoles Web3.', 'icon' => 'fa-cubes', 'color' => 'yellow'],
+        ['title' => 'Bases de Données & Optimisation', 'desc' => 'Modelisation SQL/NoSQL avancée, gestion d’indexation et d’intégrité des données sous PostgreSQL et MySQL.', 'icon' => 'fa-database', 'color' => 'emerald'],
+        ['title' => 'DevOps & Conteneurisation', 'desc' => 'Déploiement et orchestration d’environnements avec Docker, pipelines CI/CD et gestionnaires de version.', 'icon' => 'fa-docker', 'color' => 'blue'],
+    ],
+
     'projects' => [
         [
             'id' => 'safrimat-immo',

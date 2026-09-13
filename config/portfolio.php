@@ -334,7 +334,8 @@ return [
 
     'experiences' => [
         [
-            'duration' => '1 an',
+            'duration' => '7 mois',
+            'period' => 'Déc. 2025 – Juil. 2026',
             'company' => 'Safrimat Burkina',
             'role_key' => 'full_stack_dev',
             'type_key' => 'full_time',
@@ -344,6 +345,7 @@ return [
         ],
         [
             'duration' => '2 ans',
+            'period' => '2023 – 2025',
             'company' => 'ETP4A',
             'role_key' => 'full_stack_dev',
             'type_key' => 'part_time',

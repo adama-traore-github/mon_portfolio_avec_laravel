@@ -11,7 +11,10 @@
                 <div class="md:grid md:grid-cols-5 md:gap-8 items-start">
                     <div class="md:col-span-1 md:text-right mb-2 md:mb-0">
                         <span class="text-{{ $exp['color'] }}-400 font-bold block">{{ $exp['duration'] }}</span>
-                        <span class="text-slate-500 text-sm">{{ $exp['company'] }}</span>
+                        <span class="text-slate-300 font-medium text-sm block">{{ $exp['company'] }}</span>
+                        @if(!empty($exp['period']))
+                            <span class="text-slate-400 text-xs block mt-0.5">{{ $exp['period'] }}</span>
+                        @endif
                     </div>
                     <div class="md:col-span-4 bg-slate-800 rounded-2xl p-8 border border-slate-700 shadow-lg relative">
                         <h3 class="text-2xl font-bold text-white mb-2">{{ __($exp['role_key']) }}</h3>

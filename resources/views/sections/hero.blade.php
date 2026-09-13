@@ -6,7 +6,7 @@
         <div class="absolute bottom-[-20%] left-[-10%] w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[120px]"></div>
     </div>
 
-    <div class="container mx-auto px-4 sm:px-6 relative z-10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div class="flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
             
             <!-- Left Column: Typography -->

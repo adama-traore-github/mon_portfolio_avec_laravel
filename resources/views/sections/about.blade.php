@@ -1,4 +1,4 @@
-<section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-screen flex flex-col justify-center scroll-mt-20">
+<section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 min-h-screen flex flex-col justify-center scroll-mt-20">
     
     <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
         

@@ -142,6 +142,11 @@
                     <i class="fa-brands fa-github text-sm"></i>
                     <span>Code</span>
                 </a>
+            @else
+                <span class="px-3 py-1.5 bg-slate-900/80 text-slate-400 border border-slate-700/60 rounded-lg text-xs inline-flex items-center gap-1.5 ml-auto cursor-help shadow-inner" title="Code source propriétaire (Dépôt d'entreprise privé)">
+                    <i class="fa-solid fa-lock text-amber-400 text-xs"></i>
+                    <span>Repo Privé</span>
+                </span>
             @endif
         </div>
     </div>

@@ -26,6 +26,7 @@
                     <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700/80 text-cyan-400 font-bold text-xs">Flutter</span>
                     <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700/80 text-green-400 font-bold text-xs">Node.js</span>
                     <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700/80 text-emerald-400 font-bold text-xs">PostgreSQL</span>
+                    <span class="px-3 py-1 rounded-lg bg-slate-800 border border-slate-700/80 text-amber-400 font-bold text-xs inline-flex items-center gap-1.5"><i class="fa-solid fa-shield-halved"></i> Security (OWASP)</span>
                 </div>
 
                 <p class="text-base sm:text-lg text-slate-300 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
@@ -40,11 +41,13 @@
                         <span>{{ __('View my work') }}</span>
                     </a>
                     
-                    <!-- CV Download Button -->
-                    <a href="{{ asset('cv/CV_Adama_Traore.pdf') }}" target="_blank" download class="px-7 py-3.5 rounded-xl text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-cyan-500 transition-all font-semibold w-full sm:w-auto inline-flex items-center justify-center gap-2 text-sm">
-                        <i class="fa-solid fa-file-arrow-down text-cyan-400"></i>
-                        <span>{{ __('Download CV') }}</span>
-                    </a>
+                    @if(config('portfolio.owner.show_cv', false))
+                        <!-- CV Download Button -->
+                        <a href="{{ asset('cv/CV_Adama_Traore.pdf') }}" target="_blank" download class="px-7 py-3.5 rounded-xl text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-cyan-500 transition-all font-semibold w-full sm:w-auto inline-flex items-center justify-center gap-2 text-sm">
+                            <i class="fa-solid fa-file-arrow-down text-cyan-400"></i>
+                            <span>{{ __('Download CV') }}</span>
+                        </a>
+                    @endif
                 </div>
 
                 <!-- Direct Social Icons Row -->

@@ -9,12 +9,11 @@
             Une combinaison d'outils modernes pour concrétiser des projets robustes, du backend au mobile.
         </p>
     </div>
-
     <!-- 1. CORE TECH STACK (Top 6 Technologies) -->
     <div class="mb-14">
         <div class="flex items-center justify-center gap-2 mb-6">
             <span class="w-8 h-px bg-cyan-500/40"></span>
-            <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Stack Principal</span>
+            <span class="text-xs font-bold uppercase tracking-widest text-cyan-400">Technologies au Quotidien</span>
             <span class="w-8 h-px bg-cyan-500/40"></span>
         </div>
 
@@ -47,7 +46,7 @@
     </div>
 
     <!-- 2. STREAMLINED CATEGORIES (4 Clean Cards with Pills) -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-16">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         @foreach($skillCategories as $cat)
             @php
                 $catThemes = [
@@ -85,23 +84,6 @@
                 </div>
             </div>
         @endforeach
-    </div>
-
-    <!-- 3. DOMAIN EXPERTISE (Savoir-faire) -->
-    <div class="pt-4">
-        <h3 class="text-2xl font-bold text-white mb-8 text-center">{!! __('What I know') !!}</h3>
-        
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-            @foreach($knowhows as $item)
-                <div class="group bg-slate-900/90 border border-slate-800 p-5 rounded-xl transition-all duration-300 transform hover:-translate-y-1 hover:border-cyan-500/60 hover:shadow-lg hover:shadow-cyan-500/10">
-                    <div class="w-10 h-10 rounded-lg bg-slate-800 border border-slate-700/60 flex items-center justify-center text-cyan-400 mb-3 group-hover:scale-110 transition-transform">
-                        <i class="fa-solid {{ $item['icon'] }}"></i>
-                    </div>
-                    <h4 class="text-sm font-bold text-white mb-1.5 group-hover:text-cyan-400 transition-colors">{{ $item['title'] }}</h4>
-                    <p class="text-slate-400 text-xs leading-relaxed group-hover:text-slate-300 transition-colors">{{ $item['desc'] }}</p>
-                </div>
-            @endforeach
-        </div>
     </div>
 
 </section>

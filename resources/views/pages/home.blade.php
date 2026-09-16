@@ -8,7 +8,6 @@
     @include('sections.skills', [
         'coreStack' => $coreStack,
         'skillCategories' => $skillCategories,
-        'knowhows' => $knowhows,
     ])
     @include('sections.experience', ['experiences' => $experiences])
     @include('sections.certifications')

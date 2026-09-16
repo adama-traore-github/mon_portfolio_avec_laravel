@@ -42,8 +42,8 @@
                     </a>
                     
                     @if(config('portfolio.owner.show_cv', false))
-                        <!-- CV Download Button -->
-                        <a href="{{ asset('cv/CV_Adama_Traore.pdf') }}" target="_blank" download class="px-7 py-3.5 rounded-xl text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-cyan-500 transition-all font-semibold w-full sm:w-auto inline-flex items-center justify-center gap-2 text-sm">
+                        <!-- CV Download Button with Cache-Busting -->
+                        <a href="{{ asset('cv/CV_Adama_Traore.pdf') }}?v={{ @filemtime(public_path('cv/CV_Adama_Traore.pdf')) }}" target="_blank" download class="px-7 py-3.5 rounded-xl text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-cyan-500 transition-all font-semibold w-full sm:w-auto inline-flex items-center justify-center gap-2 text-sm">
                             <i class="fa-solid fa-file-arrow-down text-cyan-400"></i>
                             <span>{{ __('Download CV') }}</span>
                         </a>

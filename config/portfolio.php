@@ -260,8 +260,8 @@ return [
 
     'experiences' => [
         [
-            'duration' => '1 an 7 mois',
-            'period' => 'Déc. 2024 – Présent',
+            'duration' => '1 an 8 mois',
+            'period' => 'Déc. 2024 – Juil. 2026',
             'company' => 'Safrimat Burkina',
             'role_key' => 'full_stack_dev_cdd',
             'type_key' => 'full_time',

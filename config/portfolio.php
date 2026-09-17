@@ -123,7 +123,7 @@ return [
         [
             'id' => 'fruit-legumes-nutrition',
             'title' => 'Fruits & Légumes (Coach IA)',
-            'tech' => 'Flutter / Firebase / Firestore / IA',
+            'tech' => 'Flutter / Firebase / IA',
             'color' => 'emerald',
             'category' => 'mobile',
             'category_name' => 'Application Mobile',
@@ -140,7 +140,7 @@ return [
         [
             'id' => 'i-love-sticker',
             'title' => 'I Love Sticker',
-            'tech' => 'Node.js / Express / WhatsApp API / Telegram API',
+            'tech' => 'Node.js / Express / APIs',
             'color' => 'orange',
             'category' => 'web backend',
             'category_name' => 'Plateforme Web & API',
@@ -157,7 +157,7 @@ return [
         [
             'id' => 'gestion-locative',
             'title' => 'Gestion Locative',
-            'tech' => 'Node.js / React / Prisma / PostgreSQL',
+            'tech' => 'Node.js / React / Prisma',
             'color' => 'blue',
             'category' => 'web backend',
             'category_name' => 'Plateforme SaaS & API',
@@ -174,7 +174,7 @@ return [
         [
             'id' => 'secure-protocol',
             'title' => 'SecureProtocol',
-            'tech' => 'Node.js / Web Crypto API / ECDSA P-256 / Jest',
+            'tech' => 'Node.js / Web Crypto API',
             'color' => 'purple',
             'category' => 'backend',
             'category_name' => 'Sécurité & Cryptographie',
@@ -208,7 +208,7 @@ return [
         [
             'id' => 'event-api',
             'title' => 'API Événements & Billetterie',
-            'tech' => 'Node.js / Express / Stripe / JWT',
+            'tech' => 'Node.js / Express / Stripe',
             'color' => 'green',
             'category' => 'backend',
             'category_name' => 'API REST & Service',
@@ -242,7 +242,7 @@ return [
         [
             'id' => 'immogestion',
             'title' => 'ImmoGestion',
-            'tech' => 'Laravel 11 / Spatie Roles / Breeze',
+            'tech' => 'Laravel 11 / Breeze',
             'color' => 'purple',
             'category' => 'web',
             'category_name' => 'Plateforme SaaS',

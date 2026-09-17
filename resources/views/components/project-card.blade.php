@@ -113,7 +113,7 @@
             </div>
             <div>
                 <h3 class="text-xl font-extrabold text-white group-hover:text-cyan-400 transition-colors line-clamp-1">{{ $title }}</h3>
-                <span class="text-xs font-medium px-2.5 py-0.5 rounded-full border {{ $theme['badge'] }}">
+                <span class="text-xs font-medium px-2.5 py-0.5 rounded-full border {{ $theme['badge'] }} inline-block truncate max-w-full">
                     {{ $tech }}
                 </span>
             </div>

@@ -61,7 +61,7 @@
                             <span class="text-slate-400 font-medium flex items-center gap-2">
                                 <i class="fa-solid fa-shield-halved text-cyan-400"></i> Spécialité
                             </span>
-                            <span class="text-white font-bold">Architecture & Production</span>
+                            <span class="text-white font-bold">Architecture & Sécurité</span>
                         </div>
                     </div>
 

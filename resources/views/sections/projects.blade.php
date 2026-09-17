@@ -10,6 +10,12 @@
         </p>
     </div>
 
+    <style>
+        .filter-btn.active i {
+            color: #020617 !important;
+        }
+    </style>
+
     <!-- Filter Buttons Navigation Tabs -->
     <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12" id="project-filters">
         <button data-filter="all" class="filter-btn active px-5 py-2.5 rounded-full font-semibold text-sm transition-all shadow-md bg-cyan-500 text-slate-950 shadow-cyan-500/20">

@@ -59,24 +59,16 @@
     </div>
 </section>
 
-<!-- Filter & Responsive Carousel/Grid Script -->
+<!-- Filter & Responsive Grid Pagination Script -->
 <script>
     document.addEventListener('DOMContentLoaded', () => {
         const filterBtns = document.querySelectorAll('#project-filters .filter-btn');
         const projectCards = Array.from(document.querySelectorAll('#projects-grid .project-card'));
-        const container = document.getElementById('projects-grid');
         const controlsContainer = document.getElementById('projects-controls');
 
+        const ITEMS_PER_PAGE = 6;
         let currentFilter = 'all';
-        let currentIndex = 0;
-        let autoPlayTimer = null;
-        let isHovered = false;
-        let touchStartX = 0;
-        let touchEndX = 0;
-
-        function isMobile() {
-            return window.innerWidth < 768;
-        }
+        let currentPage = 1;
 
         function getFilteredCards() {
             if (currentFilter === 'all') {
@@ -88,141 +80,105 @@
             });
         }
 
-        function stopAutoPlay() {
-            if (autoPlayTimer) {
-                clearInterval(autoPlayTimer);
-                autoPlayTimer = null;
-            }
-        }
-
-        function startAutoPlay() {
-            stopAutoPlay();
-            if (isMobile() && !isHovered) {
-                autoPlayTimer = setInterval(() => {
-                    const filteredCards = getFilteredCards();
-                    if (filteredCards.length > 1) {
-                        currentIndex = (currentIndex + 1) % filteredCards.length;
-                        render();
-                    }
-                }, 4000);
-            }
-        }
-
         function render() {
             const filteredCards = getFilteredCards();
-            if (currentIndex >= filteredCards.length) {
-                currentIndex = 0;
+            const totalPages = Math.ceil(filteredCards.length / ITEMS_PER_PAGE) || 1;
+
+            if (currentPage > totalPages) {
+                currentPage = totalPages;
+            }
+            if (currentPage < 1) {
+                currentPage = 1;
             }
 
-            if (isMobile()) {
-                // Mode Carrousel Mobile
-                projectCards.forEach(card => {
-                    card.style.display = 'none';
-                });
+            // Masquer toutes les cartes
+            projectCards.forEach(card => {
+                card.style.display = 'none';
+            });
 
-                if (filteredCards.length > 0) {
-                    const activeCard = filteredCards[currentIndex];
-                    activeCard.style.display = 'flex';
-                }
+            // Déterminer la tranche de la page courante (6 projets par page)
+            const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+            const endIndex = startIndex + ITEMS_PER_PAGE;
+            const pageCards = filteredCards.slice(startIndex, endIndex);
 
-                renderMobileControls(filteredCards.length);
-            } else {
-                // Mode Grille Desktop
-                projectCards.forEach(card => {
-                    card.style.display = 'none';
-                });
-                filteredCards.forEach(card => {
-                    card.style.display = 'flex';
-                });
+            // Afficher uniquement les cartes de la page active
+            pageCards.forEach(card => {
+                card.style.display = 'flex';
+            });
 
-                controlsContainer.innerHTML = ''; // Pas besoin de pagination sur PC s'il y a <= 6 projets
-            }
+            // Afficher les contrôles de pagination
+            renderPaginationControls(totalPages);
         }
 
-        function renderMobileControls(total) {
+        function renderPaginationControls(totalPages) {
             controlsContainer.innerHTML = '';
-            if (total <= 1) return;
+            if (totalPages <= 1) return;
 
             // Bouton Précédent
             const prevBtn = document.createElement('button');
-            prevBtn.className = 'w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:text-white flex items-center justify-center font-bold text-sm shadow-md';
-            prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left"></i>';
+            const isFirst = currentPage === 1;
+            prevBtn.disabled = isFirst;
+            prevBtn.className = `px-4 py-2 rounded-xl border transition-all font-semibold text-sm inline-flex items-center gap-2 ${
+                isFirst 
+                    ? 'bg-slate-900/50 border-slate-800 text-slate-600 cursor-not-allowed' 
+                    : 'bg-slate-800 border-slate-700 text-slate-300 hover:text-white hover:bg-slate-700 shadow-md'
+            }`;
+            prevBtn.innerHTML = '<i class="fa-solid fa-chevron-left text-xs"></i> <span>Précédent</span>';
             prevBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex - 1 + total) % total;
-                render();
-                startAutoPlay();
+                if (currentPage > 1) {
+                    currentPage--;
+                    render();
+                    scrollToProjects();
+                }
             });
             controlsContainer.appendChild(prevBtn);
 
-            // Puces (Dots)
-            const dotsWrapper = document.createElement('div');
-            dotsWrapper.className = 'flex items-center gap-1.5 px-2';
+            // Boutons de numéros de pages (1, 2, ...)
+            const pagesWrapper = document.createElement('div');
+            pagesWrapper.className = 'flex items-center gap-2 px-1';
 
-            for (let i = 0; i < total; i++) {
-                const dot = document.createElement('button');
-                const isActive = i === currentIndex;
-                dot.className = `h-2.5 rounded-full transition-all duration-300 ${
-                    isActive ? 'w-7 bg-cyan-400 shadow-md shadow-cyan-400/30' : 'w-2.5 bg-slate-700 hover:bg-slate-500'
+            for (let i = 1; i <= totalPages; i++) {
+                const pageBtn = document.createElement('button');
+                const isActive = i === currentPage;
+                pageBtn.className = `w-10 h-10 rounded-xl font-bold text-sm transition-all duration-300 ${
+                    isActive 
+                        ? 'bg-cyan-500 text-slate-950 shadow-lg shadow-cyan-500/30 border border-cyan-400' 
+                        : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700'
                 }`;
-                dot.addEventListener('click', () => {
-                    currentIndex = i;
+                pageBtn.textContent = i;
+                pageBtn.addEventListener('click', () => {
+                    currentPage = i;
                     render();
-                    startAutoPlay();
+                    scrollToProjects();
                 });
-                dotsWrapper.appendChild(dot);
+                pagesWrapper.appendChild(pageBtn);
             }
-            controlsContainer.appendChild(dotsWrapper);
+            controlsContainer.appendChild(pagesWrapper);
 
             // Bouton Suivant
             const nextBtn = document.createElement('button');
-            nextBtn.className = 'w-10 h-10 rounded-xl bg-slate-800 border border-slate-700 text-slate-300 hover:text-white flex items-center justify-center font-bold text-sm shadow-md';
-            nextBtn.innerHTML = '<i class="fa-solid fa-chevron-right"></i>';
+            const isLast = currentPage === totalPages;
+            nextBtn.disabled = isLast;
+            nextBtn.className = `px-4 py-2 rounded-xl border transition-all font-semibold text-sm inline-flex items-center gap-2 ${
+                isLast 
+                    ? 'bg-slate-900/50 border-slate-800 text-slate-600 cursor-not-allowed' 
+                    : 'bg-slate-800 border-slate-700 text-slate-300 hover:text-white hover:bg-slate-700 shadow-md'
+            }`;
+            nextBtn.innerHTML = '<span>Suivant</span> <i class="fa-solid fa-chevron-right text-xs"></i>';
             nextBtn.addEventListener('click', () => {
-                currentIndex = (currentIndex + 1) % total;
-                render();
-                startAutoPlay();
+                if (currentPage < totalPages) {
+                    currentPage++;
+                    render();
+                    scrollToProjects();
+                }
             });
             controlsContainer.appendChild(nextBtn);
         }
 
-        // Événements de Survol pour mettre en Pause l'AutoPlay
-        container.addEventListener('mouseenter', () => {
-            isHovered = true;
-            stopAutoPlay();
-        });
-
-        container.addEventListener('mouseleave', () => {
-            isHovered = false;
-            startAutoPlay();
-        });
-
-        // Gestion du Swipe Tactile (Glissement avec le doigt)
-        container.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-            stopAutoPlay();
-        }, { passive: true });
-
-        container.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            handleSwipe();
-            startAutoPlay();
-        }, { passive: true });
-
-        function handleSwipe() {
-            const filteredCards = getFilteredCards();
-            const total = filteredCards.length;
-            if (total <= 1) return;
-
-            const diff = touchEndX - touchStartX;
-            if (Math.abs(diff) > 40) { // Seuil minimum de glissement
-                if (diff < 0) {
-                    // Swipe vers la gauche -> Prochain projet
-                    currentIndex = (currentIndex + 1) % total;
-                } else {
-                    // Swipe vers la droite -> Projet précédent
-                    currentIndex = (currentIndex - 1 + total) % total;
-                }
-                render();
+        function scrollToProjects() {
+            const projectsSection = document.getElementById('projects');
+            if (projectsSection) {
+                projectsSection.scrollIntoView({ behavior: 'smooth' });
             }
         }
 
@@ -230,7 +186,7 @@
         filterBtns.forEach(btn => {
             btn.addEventListener('click', () => {
                 currentFilter = btn.getAttribute('data-filter');
-                currentIndex = 0;
+                currentPage = 1;
 
                 filterBtns.forEach(b => {
                     b.classList.remove('active', 'bg-cyan-500', 'text-slate-950', 'shadow-cyan-500/20');
@@ -241,18 +197,10 @@
                 btn.classList.remove('bg-slate-800', 'text-slate-300', 'hover:bg-slate-700', 'border', 'border-slate-700');
 
                 render();
-                startAutoPlay();
             });
-        });
-
-        // Gestion du Redimensionnement
-        window.addEventListener('resize', () => {
-            render();
-            startAutoPlay();
         });
 
         // Initialisation
         render();
-        startAutoPlay();
     });
 </script>

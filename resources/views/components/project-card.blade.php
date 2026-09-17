@@ -91,6 +91,14 @@
                 <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-full bg-purple-500/20 text-purple-300 border border-purple-500/30 backdrop-blur-sm">
                     <i class="fa-solid fa-mobile-screen"></i> {{ $statusLabel }}
                 </span>
+            @elseif($statusBadge === 'npm')
+                <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-full bg-red-500/20 text-red-400 border border-red-500/30 backdrop-blur-sm">
+                    <i class="fa-brands fa-npm text-sm"></i> {{ $statusLabel }}
+                </span>
+            @elseif($statusBadge === 'private')
+                <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 backdrop-blur-sm">
+                    <i class="fa-solid fa-lock text-amber-400 text-xs"></i> {{ $statusLabel }}
+                </span>
             @else
                 <span class="inline-flex items-center gap-1.5 text-xs font-medium px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 backdrop-blur-sm">
                     <i class="fa-brands fa-github"></i> {{ $statusLabel }}
@@ -123,11 +131,23 @@
         
         <!-- Action Buttons Footer -->
         <div class="pt-4 border-t border-slate-700/60 flex items-center justify-between gap-3 mt-auto">
-            @if($deploy)
-                <a href="{{ $deploy }}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg transition-all text-xs inline-flex items-center gap-2 shadow-lg shadow-cyan-500/20 hover:-translate-y-0.5">
-                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                    <span>Voir le site</span>
-                </a>
+            @if($deploy && $deploy !== 'soon')
+                @if(str_contains($deploy, 'npmjs.com'))
+                    <a href="{{ $deploy }}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-red-600 hover:bg-red-500 text-white font-bold rounded-lg transition-all text-xs inline-flex items-center gap-2 shadow-lg shadow-red-600/20 hover:-translate-y-0.5">
+                        <i class="fa-brands fa-npm text-sm"></i>
+                        <span>Package npm</span>
+                    </a>
+                @else
+                    <a href="{{ $deploy }}" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-lg transition-all text-xs inline-flex items-center gap-2 shadow-lg shadow-cyan-500/20 hover:-translate-y-0.5">
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        <span>Voir le site</span>
+                    </a>
+                @endif
+            @elseif($deploy === 'soon')
+                <span class="px-3.5 py-2 bg-slate-900/90 text-amber-400 border border-amber-500/30 rounded-lg text-xs inline-flex items-center gap-2 shadow-sm font-semibold" title="Déploiement en cours / Bientôt disponible">
+                    <i class="fa-solid fa-clock text-amber-400 text-xs"></i>
+                    <span>Bientôt disponible</span>
+                </span>
             @endif
 
             @if($mobileLink)

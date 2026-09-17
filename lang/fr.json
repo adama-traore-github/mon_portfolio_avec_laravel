@@ -60,7 +60,7 @@
     "tech_mentor_trainer": "Mentor Tech & Formateur Full-Stack",
     "full_time": "Temps plein",
     "part_time": "Temps partiel / Prestation",
-    "exp_desc_safrimat": "Développement et mise en production d'applications web et mobiles (Laravel, Flutter, Supabase & Firebase). Conception de la plateforme Safrimat Immo, intégration de fonctionnalités temps réel et maintenance du parc applicatif.",
+    "exp_desc_safrimat": "Développement et mise en production d'applications web et mobiles (Laravel, Flutter, Supabase & Firebase). Conception des plateformes Safrimat Immo et de l'application Fruits & Légumes avec Coach Nutritionnel (Firestore, Feature-First), intégration de fonctionnalités temps réel et maintenance du parc applicatif.",
     "exp_desc_etp4a": "Mentorat et encadrement technique des étudiants lors de bootcamps de développement. Animation des sessions, revues de code, enseignement des bonnes pratiques d'ingénierie et suivi de la qualité du code.",
     "My Achievements": "Projets <span class=\"bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent\">Sélectionnés</span>",
     "SCOOPS FAB": "SCOOPS FAB",
@@ -71,8 +71,16 @@
     "desc_safrimat_immo_web": "Plateforme web de recherche et gestion immobilière développée sous Flutter Web & Supabase, déployée en production sur safrimo.com.",
     "Safrimat Immo (Mobile)": "Safrimat Immo (Mobile)",
     "desc_safrimat_immo_mobile": "Application mobile multi-plateforme développée sous Flutter & Supabase, publiée sur le Google Play Store pour la recherche de biens immobiliers.",
+    "Fruits & Légumes (Coach IA)": "Fruits & Légumes (Coach IA)",
+    "desc_fruit_legumes": "Application mobile organisée selon une architecture Feature-First. Elle connecte deux rôles (Client et Producteur) autour de données partagées : achat direct de fruits et légumes géolocalisés, suivi d'un profil nutritionnel personnalisé (calcul d'IMC, calories et coach IA) et gestion des stocks/commandes en temps réel via Firestore.",
     "ShopEasy": "ShopEasy",
     "desc_shopeasy": "Application mobile E-Commerce réactive développée en Flutter/Dart avec gestion complète du panier, catalogue dynamisé et architecture d'état optimisée.",
     "ImmoGestion": "ImmoGestion",
-    "desc_immo_gestion": "Plateforme SaaS complète de gestion immobilière sous Laravel 11 (Breeze, Spatie Roles), gérant les biens, locataires, baux et contrôles d'accès multi-rôles sécurisés."
+    "desc_immo_gestion": "Plateforme SaaS complète de gestion immobilière sous Laravel 11 (Breeze, Spatie Roles), gérant les biens, locataires, baux et contrôles d'accès multi-rôles sécurisés.",
+    "I Love Sticker": "I Love Sticker",
+    "desc_i_love_sticker": "Plateforme web et Telegram Mini App permettant la conversion et la régénération dynamique de packs de stickers Telegram vers WhatsApp via les API Telegram, Webhooks Meta Cloud & Baileys.",
+    "Gestion Locative": "Gestion Locative",
+    "desc_gestion_locative": "Solution complète de gestion locative immobilière associant une API backend Express/Prisma (PostgreSQL), un bot WhatsApp d'automatisation des rappels et une interface web réactive sous React et TypeScript.",
+    "SecureProtocol": "SecureProtocol",
+    "desc_secure_protocol": "Bibliothèque et standard d'interopérabilité cryptographique conçu sur une architecture modulaire (Façade & Strategy). Permet à deux systèmes (ex: Certify Magic et Campus Faso) d'échanger et de vérifier la même attestation numérique hors-ligne et sans BDD centrale via une preuve standardisée (embarquée en PDF ou .secure), Web Crypto API, ECDSA P-256 (JWK) et SHA-256."
 }

@@ -82,7 +82,10 @@
             if (currentFilter === 'all') {
                 return projectCards;
             }
-            return projectCards.filter(card => card.getAttribute('data-category') === currentFilter);
+            return projectCards.filter(card => {
+                const categories = (card.getAttribute('data-category') || '').split(' ');
+                return categories.includes(currentFilter);
+            });
         }
 
         function stopAutoPlay() {

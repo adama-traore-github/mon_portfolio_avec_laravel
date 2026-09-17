@@ -60,7 +60,7 @@
     "tech_mentor_trainer": "Tech Mentor & Lead Instructor",
     "full_time": "Full Time",
     "part_time": "Part Time / Contract",
-    "exp_desc_safrimat": "Development and deployment of web and mobile applications (Laravel, Flutter, Supabase & Firebase). Architected the Safrimat Immo platform, integrated real-time features, and maintained production software applications.",
+    "exp_desc_safrimat": "Development and deployment of web and mobile applications (Laravel, Flutter, Supabase & Firebase). Architected the Safrimat Immo platform and the Fruits & Vegetables app with Nutritional AI Coach (Firestore, Feature-First), integrated real-time features, and maintained production software applications.",
     "exp_desc_etp4a": "Technical mentoring and coaching of students during coding bootcamps. Led code review sessions, taught software engineering best practices, and monitored codebase quality.",
     "My Achievements": "Featured <span class=\"bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent\">Projects</span>",
     "SCOOPS FAB": "SCOOPS FAB",
@@ -71,8 +71,16 @@
     "desc_safrimat_immo_web": "Real estate search and management web platform built with Flutter Web & Supabase, deployed in production on safrimo.com.",
     "Safrimat Immo (Mobile)": "Safrimat Immo (Mobile)",
     "desc_safrimat_immo_mobile": "Cross-platform mobile application built with Flutter & Supabase, published on the Google Play Store for real estate search.",
+    "Fruits & Légumes (Coach IA)": "Fruits & Vegetables (AI Coach)",
+    "desc_fruit_legumes": "Feature-First mobile application connecting Clients and Producers around shared data: direct geolocated purchase of fruits and vegetables, personalized nutritional tracking (BMI, calories, and AI coach), and real-time inventory/order management via Firestore.",
     "ShopEasy": "ShopEasy",
     "desc_shopeasy": "Responsive mobile e-commerce application built with Flutter/Dart, featuring full cart management, dynamic catalog, and optimized state management.",
     "ImmoGestion": "ImmoGestion",
-    "desc_immo_gestion": "Comprehensive SaaS real estate management platform built with Laravel 11 (Breeze, Spatie Roles), managing properties, tenants, leases, and secure multi-role access."
+    "desc_immo_gestion": "Comprehensive SaaS real estate management platform built with Laravel 11 (Breeze, Spatie Roles), managing properties, tenants, leases, and secure multi-role access.",
+    "I Love Sticker": "I Love Sticker",
+    "desc_i_love_sticker": "Web platform and Telegram Mini App for dynamic conversion and on-the-fly regeneration of Telegram sticker packs to WhatsApp via Telegram API, Meta Cloud Webhooks & Baileys.",
+    "Gestion Locative": "Property Rental Management",
+    "desc_gestion_locative": "Complete real estate rental management solution combining an Express/Prisma (PostgreSQL) backend API, an automated WhatsApp reminder bot, and a responsive React/TypeScript web frontend.",
+    "SecureProtocol": "SecureProtocol",
+    "desc_secure_protocol": "Cryptographic interoperability library and standard built on a modular architecture (Facade & Strategy). Enables independent systems (e.g. Certify Magic & Campus Faso) to exchange and verify digital attestations offline without a central database using standardized proofs (embedded PDF / .secure), Web Crypto API, ECDSA P-256 (JWK), and SHA-256."
 }

@@ -82,5 +82,7 @@
     "Gestion Locative": "Gestion Locative",
     "desc_gestion_locative": "Solution complète de gestion locative immobilière associant une API backend Express/Prisma (PostgreSQL), un bot WhatsApp d'automatisation des rappels et une interface web réactive sous React et TypeScript.",
     "SecureProtocol": "SecureProtocol",
-    "desc_secure_protocol": "Bibliothèque et standard d'interopérabilité cryptographique conçu sur une architecture modulaire (Façade & Strategy). Permet à deux systèmes (ex: Certify Magic et Campus Faso) d'échanger et de vérifier la même attestation numérique hors-ligne et sans BDD centrale via une preuve standardisée (embarquée en PDF ou .secure), Web Crypto API, ECDSA P-256 (JWK) et SHA-256."
+    "desc_secure_protocol": "Bibliothèque et standard d'interopérabilité cryptographique conçu sur une architecture modulaire (Façade & Strategy). Permet à deux systèmes (ex: Certify Magic et Campus Faso) d'échanger et de vérifier la même attestation numérique hors-ligne et sans BDD centrale via une preuve standardisée (embarquée en PDF ou .secure), Web Crypto API, ECDSA P-256 (JWK) et SHA-256.",
+    "Mon Portfolio": "Mon Portfolio",
+    "desc_mon_portfolio": "Portfolio professionnel réactif et multilingue (Français/Anglais) conçu sous Laravel 11 et TailwindCSS, intégrant une architecture propre, la gestion dynamique de projets et le filtrage temps réel."
 }

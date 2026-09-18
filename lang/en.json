@@ -82,5 +82,7 @@
     "Gestion Locative": "Property Rental Management",
     "desc_gestion_locative": "Complete real estate rental management solution combining an Express/Prisma (PostgreSQL) backend API, an automated WhatsApp reminder bot, and a responsive React/TypeScript web frontend.",
     "SecureProtocol": "SecureProtocol",
-    "desc_secure_protocol": "Cryptographic interoperability library and standard built on a modular architecture (Facade & Strategy). Enables independent systems (e.g. Certify Magic & Campus Faso) to exchange and verify digital attestations offline without a central database using standardized proofs (embedded PDF / .secure), Web Crypto API, ECDSA P-256 (JWK), and SHA-256."
+    "desc_secure_protocol": "Cryptographic interoperability library and standard built on a modular architecture (Facade & Strategy). Enables independent systems (e.g. Certify Magic & Campus Faso) to exchange and verify digital attestations offline without a central database using standardized proofs (embedded PDF / .secure), Web Crypto API, ECDSA P-256 (JWK), and SHA-256.",
+    "Mon Portfolio": "My Portfolio",
+    "desc_mon_portfolio": "Responsive and multilingual (French/English) professional portfolio built with Laravel 11 and TailwindCSS, featuring clean architecture, dynamic category filtering, and real-time responsiveness."
 }

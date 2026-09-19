@@ -76,11 +76,11 @@
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
                     <div>
                         <label for="name" class="block text-slate-300 mb-2 text-sm font-medium">{{ __('Name') }}</label>
-                        <input type="text" id="name" name="name" required class="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors text-sm" placeholder="John Doe">
+                        <input type="text" id="name" name="name" required class="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors text-sm" placeholder="Moussa Ouédraogo">
                     </div>
                     <div>
                         <label for="email" class="block text-slate-300 mb-2 text-sm font-medium">{{ __('Email') }}</label>
-                        <input type="email" id="email" name="email" required class="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors text-sm" placeholder="john@example.com">
+                        <input type="email" id="email" name="email" required class="w-full bg-slate-900/90 border border-slate-700/80 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-cyan-500 focus:ring-1 focus:ring-cyan-500 transition-colors text-sm" placeholder="ouedraogo@example.com">
                     </div>
                 </div>
 

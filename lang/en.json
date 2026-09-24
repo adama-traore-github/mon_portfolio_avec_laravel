@@ -84,5 +84,9 @@
     "SecureProtocol": "SecureProtocol",
     "desc_secure_protocol": "Cryptographic interoperability library and standard built on a modular architecture (Facade & Strategy). Enables independent systems (e.g. Certify Magic & Campus Faso) to exchange and verify digital attestations offline without a central database using standardized proofs (embedded PDF / .secure), Web Crypto API, ECDSA P-256 (JWK), and SHA-256.",
     "Mon Portfolio": "My Portfolio",
-    "desc_mon_portfolio": "Responsive and multilingual (French/English) professional portfolio built with Laravel 11 and TailwindCSS, featuring clean architecture, dynamic category filtering, and real-time responsiveness."
+    "desc_mon_portfolio": "Responsive and multilingual (French/English) professional portfolio built with Laravel 11 and TailwindCSS, featuring clean architecture, dynamic category filtering, and real-time responsiveness.",
+    "Urgence Médicale (Mobile)": "Medical Emergency (Mobile)",
+    "desc_urgence_medicale_mobile": "Flutter mobile application for real-time geolocation of healthcare facilities and duty pharmacies. Features GPS proximity calculation, dynamic WebSocket synchronization via Socket.IO, Firebase push notifications (FCM), and offline caching support.",
+    "Urgence Médicale (Backend API)": "Medical Emergency (Backend API)",
+    "desc_urgence_medicale_backend": "Node.js & Express backend server providing RESTful APIs and Socket.IO WebSockets for medical emergency management. Includes automated duty rotation cron jobs, Firebase Admin SDK authentication, and crisis alert notifications."
 }

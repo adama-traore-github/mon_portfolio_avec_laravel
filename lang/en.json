@@ -76,7 +76,7 @@
     "ShopEasy": "ShopEasy",
     "desc_shopeasy": "Responsive mobile e-commerce application built with Flutter/Dart, featuring full cart management, dynamic catalog, and optimized state management.",
     "ImmoGestion": "ImmoGestion",
-    "desc_immo_gestion": "Comprehensive SaaS real estate management platform built with Laravel 11 (Breeze, Spatie Roles), managing properties, tenants, leases, and secure multi-role access.",
+    "desc_immo_gestion": "Comprehensive SaaS real estate management platform built with Laravel 11 (Breeze, Spatie Roles), managing properties, tenants, houses, and secure multi-role access.",
     "I Love Sticker": "I Love Sticker",
     "desc_i_love_sticker": "Web platform and Telegram Mini App for dynamic conversion and on-the-fly regeneration of Telegram sticker packs to WhatsApp via Telegram API, Meta Cloud Webhooks & Baileys.",
     "Gestion Locative": "Property Rental Management",

@@ -60,7 +60,7 @@
     "tech_mentor_trainer": "Mentor Tech & Formateur Full-Stack",
     "full_time": "Temps plein",
     "part_time": "Temps partiel / Prestation",
-    "exp_desc_safrimat": "Développement et mise en production d'applications web et mobiles (Laravel, Flutter, Supabase & Firebase). Conception des plateformes Safrimat Immo et de l'application Fruits & Légumes avec Coach Nutritionnel (Firestore, Feature-First), intégration de fonctionnalités temps réel et maintenance du parc applicatif.",
+    "exp_desc_safrimat": "Conception et développement complet de A à Z d'une application métier interne dédiée aux équipes commerciales. Participation à la conception et au développement d'une dizaine de solutions web, mobiles et back-offices (dont Safrimat Immo et Fruits & Légumes) sous Laravel, Flutter, Supabase et Firebase. Ajout de nouvelles fonctionnalités, mises à jour, correction de bugs et sécurité applicative sur des projets en production.",
     "exp_desc_etp4a": "Mentorat et encadrement technique des étudiants lors de bootcamps de développement. Animation des sessions, revues de code, enseignement des bonnes pratiques d'ingénierie et suivi de la qualité du code.",
     "My Achievements": "Projets <span class=\"bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent\">Sélectionnés</span>",
     "SCOOPS FAB": "SCOOPS FAB",

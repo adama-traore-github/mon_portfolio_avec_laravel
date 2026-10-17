@@ -40,7 +40,7 @@
                             <span class="text-slate-400 font-medium flex items-center gap-2">
                                 <i class="fa-solid fa-graduation-cap text-cyan-400"></i> Diplôme
                             </span>
-                            <span class="text-white font-bold">Ingénieur Génie Logiciel</span>
+                            <span class="text-white font-bold">Licence Génie Logiciel (UVBF)</span>
                         </div>
 
                         <div class="flex items-center justify-between p-3 rounded-xl bg-slate-800/50 border border-slate-800/80">

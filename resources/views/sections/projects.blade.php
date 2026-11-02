@@ -14,12 +14,21 @@
         .filter-btn.active i {
             color: #020617 !important;
         }
+        .filter-btn.active .project-count-badge {
+            background-color: rgba(2, 6, 23, 0.3) !important;
+            color: #020617 !important;
+        }
+        .filter-btn:not(.active) .project-count-badge {
+            background-color: rgba(15, 23, 42, 0.7) !important;
+            color: #ffffff !important;
+            border: 1px solid rgba(51, 65, 85, 0.6) !important;
+        }
     </style>
 
     <!-- Filter Buttons Navigation Tabs -->
     <div class="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-12" id="project-filters">
         <button data-filter="all" class="filter-btn active px-5 py-2.5 rounded-full font-semibold text-sm transition-all shadow-md bg-cyan-500 text-slate-950 shadow-cyan-500/20">
-            <i class="fa-solid fa-layer-group mr-1.5"></i> Tous <span class="ml-1 text-xs px-2 py-0.5 rounded-full bg-slate-900/40 text-slate-900 font-bold">{{ count($projects) }}</span>
+            <i class="fa-solid fa-layer-group mr-1.5"></i> Tous <span class="project-count-badge ml-1 text-xs px-2 py-0.5 rounded-full font-bold transition-all">{{ count($projects) }}</span>
         </button>
 
         <button data-filter="web" class="filter-btn px-5 py-2.5 rounded-full font-semibold text-sm transition-all bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-white border border-slate-700">

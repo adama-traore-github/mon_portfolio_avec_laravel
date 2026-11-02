@@ -307,6 +307,23 @@ return [
             'show_github' => true,
             'is_featured' => true,
         ],
+        [
+            'id' => 'lovematch',
+            'title' => 'LoveMatch',
+            'tech' => 'Java EE / WebSocket / PostgreSQL',
+            'color' => 'red',
+            'category' => 'web backend',
+            'category_name' => 'Application Web & Java EE',
+            'status_badge' => 'repo',
+            'status_label' => 'Code Source',
+            'icon' => 'fa-heart',
+            'desc_key' => 'desc_lovematch',
+            'link' => 'https://github.com/adama-traore-github/love_match',
+            'deploy' => null,
+            'mobile_link' => null,
+            'show_github' => true,
+            'is_featured' => true,
+        ],
     ],
 
     'experiences' => [

@@ -88,5 +88,7 @@
     "Urgence Médicale (Mobile)": "Urgence Médicale (Mobile)",
     "desc_urgence_medicale_mobile": "Application mobile Flutter permettant la géolocalisation des établissements de santé et des pharmacies de garde en temps réel. Intègre le calcul de proximité GPS, la synchronisation dynamique via Socket.IO, les notifications push Firebase (FCM) et le mode hors-ligne avec mise en cache.",
     "Urgence Médicale (Backend API)": "Urgence Médicale (Backend API)",
-    "desc_urgence_medicale_backend": "Serveur backend sous Node.js & Express fournissant une API RESTful et des WebSockets (Socket.IO) pour la gestion des urgences médicales. Intègre un Cron Job d'automatisation de rotation des gardes, l'authentification Firebase Admin SDK et l'envoi de notifications d'alerte."
+    "desc_urgence_medicale_backend": "Serveur backend sous Node.js & Express fournissant une API RESTful et des WebSockets (Socket.IO) pour la gestion des urgences médicales. Intègre un Cron Job d'automatisation de rotation des gardes, l'authentification Firebase Admin SDK et l'envoi de notifications d'alerte.",
+    "LoveMatch": "LoveMatch",
+    "desc_lovematch": "Application web de rencontre développée avec Java EE (Servlets, WebSocket) et frontend HTML/CSS/JS. Intègre une messagerie interactive en temps réel, la persistance relationnelle PostgreSQL et un pipeline de build Maven pour Apache Tomcat."
 }

@@ -23,7 +23,7 @@ return [
         ['name' => 'Flutter', 'icon' => 'fa-flutter', 'icon_type' => 'custom', 'color' => 'cyan'],
         ['name' => 'Node.js', 'icon' => 'fa-node-js', 'icon_type' => 'brand', 'color' => 'green'],
         ['name' => 'PostgreSQL', 'icon' => 'fa-database', 'icon_type' => 'solid', 'color' => 'emerald'],
-        ['name' => 'TailwindCSS', 'icon' => 'fa-css3-alt', 'icon_type' => 'brand', 'color' => 'cyan'],
+        ['name' => 'FastAPI', 'icon' => 'fa-bolt', 'icon_type' => 'solid', 'color' => 'emerald'],
         ['name' => 'Docker', 'icon' => 'fa-docker', 'icon_type' => 'brand', 'color' => 'blue'],
     ],
 
@@ -36,6 +36,7 @@ return [
             'skills' => [
                 ['name' => 'Laravel 11 / PHP 8+', 'icon' => 'fa-laravel', 'brand' => true],
                 ['name' => 'Node.js / Express', 'icon' => 'fa-node-js', 'brand' => true],
+                ['name' => 'Python / FastAPI', 'icon' => 'fa-bolt', 'brand' => false],
                 ['name' => 'Conception d\'APIs RESTful', 'icon' => 'fa-network-wire', 'brand' => false],
                 ['name' => 'Sécurité Applicative & OWASP', 'icon' => 'fa-shield-halved', 'brand' => false],
             ]

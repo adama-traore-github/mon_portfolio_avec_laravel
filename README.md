@@ -16,7 +16,7 @@ Portfolio web personnel présentant mes compétences, expériences professionnel
   - **Safrimat Burkina (CDD)** : Conception et développement d'applications métier internes pour les équipes commerciales, projets Safrimat Immo, Fruits & Légumes (Laravel, Flutter, Supabase, Firebase).
   - **ETP4A** : Mentorat technique et formation en développement full-stack.
 - **Réalisations (`projects`)** : Showcase des solutions web, mobiles (dont APK List, Safrimat Immo), IA & multimédia (Auto-Recap), Java EE et back-offices en production ou privés avec filtrage dynamique et pagination réactive.
-- **Compétences & Certifications** : Architecture logicielle, sécurité applicative (OWASP) et DevOps.
+- **Compétences & Certifications** : Core stack (Laravel, Flutter, Node.js, PostgreSQL, FastAPI, Docker), architecture logicielle, sécurité applicative (OWASP) et DevOps.
 - **Contact** : Formulaire et canaux professionnels directs.
 
 ## 🚀 Installation & Lancement

@@ -24,4 +24,12 @@ class PortfolioTest extends TestCase
         $response->assertSee('APK List');
         $response->assertSee('Flutter / Android Natif / PostgreSQL');
     }
+
+    public function test_home_page_displays_core_stack_fastapi(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertSee('FastAPI');
+    }
 }

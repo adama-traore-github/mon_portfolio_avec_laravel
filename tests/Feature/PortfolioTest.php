@@ -15,4 +15,13 @@ class PortfolioTest extends TestCase
         $response->assertSee('Python / Gemini / Whisper / FFmpeg');
         $response->assertSee('IA & Pipeline Vidéo');
     }
+
+    public function test_home_page_displays_apk_list_project(): void
+    {
+        $response = $this->get('/');
+
+        $response->assertStatus(200);
+        $response->assertSee('APK List');
+        $response->assertSee('Flutter / Android Natif / PostgreSQL');
+    }
 }

@@ -92,5 +92,7 @@
     "LoveMatch": "LoveMatch",
     "desc_lovematch": "Web dating application developed with Java EE (Servlets, WebSocket) and an HTML/CSS/JS frontend. Features interactive real-time messaging, PostgreSQL relational persistence, and a Maven build pipeline for Apache Tomcat.",
     "Auto-Recap": "Auto-Recap",
-    "desc_auto_recap": "Autonomous industrial video production pipeline (Shorts, TikTok, YouTube 16:9) from raw text scripts. Features Gemini TTS voice synthesis, Whisper Large v3 word-level audio alignment, LLM artistic direction, dHash / Gemini Vision perceptual filtering, and cinematic Ken Burns rendering with FFmpeg."
+    "desc_auto_recap": "Autonomous industrial video production pipeline (Shorts, TikTok, YouTube 16:9) from raw text scripts. Features Gemini TTS voice synthesis, Whisper Large v3 word-level audio alignment, LLM artistic direction, dHash / Gemini Vision perceptual filtering, and cinematic Ken Burns rendering with FFmpeg.",
+    "APK List": "APK List",
+    "desc_apk_list": "Mobile application for auditing and inventorying Android apps (system and third-party). Features multithreaded native MethodChannel extraction, background system event detection via BroadcastReceiver, permission analysis, and cloud PostgreSQL synchronization (Neon Serverless)."
 }

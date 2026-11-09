@@ -87,6 +87,23 @@ return [
 
     'projects' => [
         [
+            'id' => 'auto-recap',
+            'title' => 'Auto-Recap',
+            'tech' => 'Python / Gemini / Whisper / FFmpeg',
+            'color' => 'indigo',
+            'category' => 'backend',
+            'category_name' => 'IA & Pipeline Vidéo',
+            'status_badge' => 'private',
+            'status_label' => 'Repo Privé',
+            'icon' => 'fa-clapperboard',
+            'desc_key' => 'desc_auto_recap',
+            'link' => '#',
+            'deploy' => null,
+            'mobile_link' => null,
+            'show_github' => false,
+            'is_featured' => true,
+        ],
+        [
             'id' => 'safrimat-immo-mobile',
             'title' => 'Safrimat Immo (Mobile)',
             'tech' => 'Flutter / Supabase',

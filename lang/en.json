@@ -90,5 +90,7 @@
     "Urgence Médicale (Backend API)": "Medical Emergency (Backend API)",
     "desc_urgence_medicale_backend": "Node.js & Express backend server providing RESTful APIs and Socket.IO WebSockets for medical emergency management. Includes automated duty rotation cron jobs, Firebase Admin SDK authentication, and crisis alert notifications.",
     "LoveMatch": "LoveMatch",
-    "desc_lovematch": "Web dating application developed with Java EE (Servlets, WebSocket) and an HTML/CSS/JS frontend. Features interactive real-time messaging, PostgreSQL relational persistence, and a Maven build pipeline for Apache Tomcat."
+    "desc_lovematch": "Web dating application developed with Java EE (Servlets, WebSocket) and an HTML/CSS/JS frontend. Features interactive real-time messaging, PostgreSQL relational persistence, and a Maven build pipeline for Apache Tomcat.",
+    "Auto-Recap": "Auto-Recap",
+    "desc_auto_recap": "Autonomous industrial video production pipeline (Shorts, TikTok, YouTube 16:9) from raw text scripts. Features Gemini TTS voice synthesis, Whisper Large v3 word-level audio alignment, LLM artistic direction, dHash / Gemini Vision perceptual filtering, and cinematic Ken Burns rendering with FFmpeg."
 }
